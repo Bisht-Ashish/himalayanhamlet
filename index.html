@@ -115,6 +115,9 @@ footer.site{background:#1c3638;box-shadow:0 0 0 100vmax #1c3638}
 footer.site{background:#dcebe4;color:#4a625c;box-shadow:0 0 0 100vmax #dcebe4}
 footer.site a{color:#4a625c}
 }
+.map{margin:16px 0 18px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 28px -14px rgba(20,25,60,.35)}
+.map iframe{display:block;width:100%;height:380px;border:0}
+@media(max-width:760px){.map iframe{height:300px}}
 </style>
 </head>
 <body>
@@ -162,7 +165,7 @@ footer.site a{color:#4a625c}
 <div><h2>A day at the Hamlet</h2><ul class="list"><li>Sunrise<span>Chai on the balcony, peaks turning gold</span></li><li>Morning<span>Breakfast, then a village or farm walk</span></li><li>Afternoon<span>Nanda Devi Temple or Kasar Devi</span></li><li>Evening<span>Stargazing, bonfire in winter</span></li></ul><p class="note" style="margin-top:8px">Example plan. Edit to match what you offer.</p></div></div></section>
 
 <section id="weather"><h2>Weather in Almora</h2><div class="wx" id="wx"><p class="note">The 5-day forecast appears here on the live site. Until then, see the season guide above.</p></div>
-<h3 style="margin:22px 0 8px">How to reach us</h3><p>Almora is about 90 km from Kathgodam railway station, roughly a 3 hour drive. Park at the road, then walk about 200 metres to the house. Message us before you set off and we will guide you the last stretch.</p><a class="btn" href="https://maps.app.goo.gl/jnBMKa5w9RrQqQQC7" target="_blank" rel="noopener">Get directions in Google Maps</a></section>
+<h3 style="margin:22px 0 8px">How to reach us</h3><p>Almora is about 90 km from Kathgodam railway station, roughly a 3 hour drive. Park at the road, then walk about 200 metres to the house. Message us before you set off and we will guide you the last stretch.</p><div class="map"><iframe title="Map showing Himalayan Hamlet Homestay in Almora" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.640801505709!2d79.67432951118822!3d29.62253797503498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0b7b0fd1dd5bf%3A0x93ba7719f5172287!2sHimalayan%20Hamlet%20Homestay%20(Homestay%20in%20Almora)!5e1!3m2!1sen!2sin!4v1791915353138!5m2!1sen!2sin" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><a class="btn" href="https://maps.app.goo.gl/jnBMKa5w9RrQqQQC7" target="_blank" rel="noopener">Get directions in Google Maps</a></section>
 
 <section id="reviews"><h2>What guests say</h2><div class="rev" id="rev"></div><p style="margin-top:14px"><a href="https://www.airbnb.co.in/rooms/40210492" target="_blank" rel="noopener" style="color:var(--brand)">Read all 84 reviews on Airbnb</a></p></section>
 
@@ -208,7 +211,7 @@ $("gal").innerHTML=[205,215,195,185,225,175].map(function(h,i){return '<div clas
 $("rate").innerHTML=PRICE?'<span style="font-weight:800;font-size:1.2rem;color:var(--ink)">₹'+PRICE.toLocaleString("en-IN")+'</span> per night for the whole suite':'Message us your dates for exact rates.';
 $("rev").innerHTML=REVIEWS.map(function(r){return '<blockquote><p>“'+r.t+'”</p><footer>'+r.n+'</footer></blockquote>'}).join("");
 $("stWa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(HELLO);
-try{fetch("https://api.open-meteo.com/v1/forecast?latitude=29.597&longitude=79.659&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FKolkata&forecast_days=5").then(function(r){return r.json()}).then(function(w){var d=w.daily;$("wx").innerHTML=d.time.map(function(x,i){return '<div>'+new Date(x).toLocaleDateString("en-IN",{weekday:"short"})+'<b>'+Math.round(d.temperature_2m_max[i])+'° / '+Math.round(d.temperature_2m_min[i])+'°</b>Rain '+d.precipitation_probability_max[i]+'%</div>'}).join("")}).catch(function(){})}catch(e){}
+try{fetch("https://api.open-meteo.com/v1/forecast?latitude=29.6225&longitude=79.6743&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FKolkata&forecast_days=5").then(function(r){return r.json()}).then(function(w){var d=w.daily;$("wx").innerHTML=d.time.map(function(x,i){return '<div>'+new Date(x).toLocaleDateString("en-IN",{weekday:"short"})+'<b>'+Math.round(d.temperature_2m_max[i])+'° / '+Math.round(d.temperature_2m_min[i])+'°</b>Rain '+d.precipitation_probability_max[i]+'%</div>'}).join("")}).catch(function(){})}catch(e){}
 var BOOKED=[];
 function check(){var a=$("bIn").value,b=$("bOut").value,el=$("avail");el.textContent="";if(!a||!b||!BOOKED.length)return;if(b<=a){el.textContent="Check-out must be after check-in.";return}el.textContent=BOOKED.some(function(r){return a<r.end&&b>r.start})?"Those dates look booked. Message us anyway, as the calendar can lag by a few hours.":"These dates look free. Send your enquiry to confirm."}
 ["bIn","bOut"].forEach(function(i){$(i).addEventListener("input",check)});
