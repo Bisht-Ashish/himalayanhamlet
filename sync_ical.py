@@ -11,6 +11,9 @@ Setup on the VPS:
   3. Test:  python3 /opt/sync_ical/sync_ical.py
   4. Run every 30 minutes:  crontab -e  and add
      */30 * * * * /usr/bin/python3 /opt/sync_ical/sync_ical.py
+
+On GitHub Actions the workflow sets ICAL_URL (from a repository secret)
+and BOOKED_OUTPUT (the folder that gets published), so no file is needed.
 """
 import json
 import os
@@ -21,7 +24,8 @@ import urllib.request
 from datetime import date
 
 URL_FILE = "/opt/sync_ical/ical_url.txt"
-OUTPUT = "/var/www/himalayan-hamlet/booked.json"  # your site's web root
+# Defaults are for the VPS. GitHub Actions overrides both with environment variables.
+OUTPUT = os.environ.get("BOOKED_OUTPUT", "/var/www/himalayan-hamlet/booked.json")
 
 
 def fetch(url):
@@ -60,7 +64,7 @@ def parse(ics):
 
 def main():
     try:
-        url = open(URL_FILE).read().strip()
+        url = os.environ.get("ICAL_URL", "").strip() or open(URL_FILE).read().strip()
         ranges = parse(fetch(url))
     except Exception as e:
         # Keep the previous booked.json if anything fails

@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # Every hour: refresh booked dates from the Airbnb calendar and republish
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -28,6 +31,18 @@ jobs:
           mkdir _site
           cp index.html _site/
           if [ -d images ]; then cp -r images _site/images; fi
+
+      - name: Sync Airbnb calendar (booked dates only)
+        continue-on-error: true
+        env:
+          ICAL_URL: ${{ secrets.AIRBNB_ICAL_URL }}
+          BOOKED_OUTPUT: _site/booked.json
+        run: |
+          if [ -z "$ICAL_URL" ]; then
+            echo "AIRBNB_ICAL_URL secret is not set; skipping calendar sync."
+            exit 0
+          fi
+          python3 sync_ical.py
 
       - uses: actions/configure-pages@v5
 

@@ -35,7 +35,15 @@ Put photos in an `images/` folder as compressed WebP files and replace the drawn
 
 To use your own domain, add it under Settings, Pages, Custom domain, then add the DNS records GitHub shows.
 
-GitHub Pages cannot run `sync_ical.py`, so the booked-dates check will not show there.
+### Live availability on GitHub Pages
+
+The Pages workflow also refreshes booked dates every hour (and on every push):
+
+1. In Airbnb, open your calendar, then availability settings, then Connect calendars, then Export calendar, and copy the `.ics` link.
+2. In this repo go to **Settings, Secrets and variables, Actions, New repository secret**. Name it `AIRBNB_ICAL_URL` and paste the link as the value. Never put the link in a file or in a commit.
+3. Open the **Actions** tab, choose **Deploy to GitHub Pages**, and press **Run workflow** once to test it.
+
+The workflow runs `sync_ical.py`, which saves only the booked date ranges to `booked.json` before the site is published. Airbnb's feed can lag by up to 12 hours, so the form always tells guests to confirm by message. If the secret is missing or Airbnb cannot be reached, the site is still published, just without the booked-dates message.
 
 ## Option B: your VPS
 
