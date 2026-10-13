@@ -182,14 +182,15 @@ footer.site a{color:#4a625c}
 <p class="note full" id="avail" aria-live="polite"></p><a class="btn full" id="bWa" href="#" target="_blank" rel="noopener">Send enquiry on WhatsApp</a>
 <p class="note full">This opens WhatsApp with your details filled in. No payment is taken on this site.</p></form></section>
 
-<footer class="site"><p><strong>Himalayan Hamlet</strong> · Almora, Uttarakhand · +91 99999 99999 · hello@yourdomain.in</p><p><a href="#">Privacy policy</a><a href="#">Cancellation &amp; refund policy</a><a href="#">Terms</a></p></footer>
+<footer class="site"><p><strong>Himalayan Hamlet</strong> · Almora, Uttarakhand · +91 78927 12293 · hello@yourdomain.in</p><p><a href="#">Privacy policy</a><a href="#">Cancellation &amp; refund policy</a><a href="#">Terms</a></p></footer>
 </div>
 
 <div class="sticky"><a class="btn" href="#book">Check dates</a><a class="btn alt" id="stWa" href="#" target="_blank" rel="noopener">WhatsApp</a></div>
 
 <script>
 // ---- EDIT THESE ----
-var WA="919999999999";
+var WA="917892712293";
+var HELLO="Namaste! 🙏 I found "+"Himalayan Hamlet"+" on your website and I'd like to enquire about a stay in Almora. Could you please share availability and rates?";
 var NAME="Himalayan Hamlet";
 var REVIEWS=[ // paste real reviews: {t:"review text",n:"First name, month year"}
 {t:"Paste a real guest review here.",n:"Guest name, Month Year"},
@@ -206,16 +207,16 @@ $("bg").innerHTML=scene();$("r1").innerHTML=art(215,"a");$("r2").innerHTML=art(1
 $("gal").innerHTML=[205,215,195,185,225,175].map(function(h,i){return '<div class="art-box">'+art(h,"q"+i)+'</div>'}).join("");
 $("rate").innerHTML=PRICE?'<span style="font-weight:800;font-size:1.2rem;color:var(--ink)">₹'+PRICE.toLocaleString("en-IN")+'</span> per night for the whole suite':'Message us your dates for exact rates.';
 $("rev").innerHTML=REVIEWS.map(function(r){return '<blockquote><p>“'+r.t+'”</p><footer>'+r.n+'</footer></blockquote>'}).join("");
-$("stWa").href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hi, I'm interested in staying at "+NAME+".");
+$("stWa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(HELLO);
 try{fetch("https://api.open-meteo.com/v1/forecast?latitude=29.597&longitude=79.659&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FKolkata&forecast_days=5").then(function(r){return r.json()}).then(function(w){var d=w.daily;$("wx").innerHTML=d.time.map(function(x,i){return '<div>'+new Date(x).toLocaleDateString("en-IN",{weekday:"short"})+'<b>'+Math.round(d.temperature_2m_max[i])+'° / '+Math.round(d.temperature_2m_min[i])+'°</b>Rain '+d.precipitation_probability_max[i]+'%</div>'}).join("")}).catch(function(){})}catch(e){}
 var BOOKED=[];
 function check(){var a=$("bIn").value,b=$("bOut").value,el=$("avail");el.textContent="";if(!a||!b||!BOOKED.length)return;if(b<=a){el.textContent="Check-out must be after check-in.";return}el.textContent=BOOKED.some(function(r){return a<r.end&&b>r.start})?"Those dates look booked. Message us anyway, as the calendar can lag by a few hours.":"These dates look free. Send your enquiry to confirm."}
 ["bIn","bOut"].forEach(function(i){$(i).addEventListener("input",check)});
 try{fetch("booked.json").then(function(r){return r.ok?r.json():[]}).then(function(d){BOOKED=d;check()}).catch(function(){})}catch(e){}
 var t=new Date().toISOString().slice(0,10);$("bIn").min=t;$("bOut").min=t;
-function link(){var nm=$("bName").value,m="Hi, I'd like to book "+NAME+" in Almora"+($("bIn").value?" from "+$("bIn").value:"")+($("bOut").value?" to "+$("bOut").value:"")+" for "+$("bG").value+" guests."+(nm?" Name: "+nm:"");$("bWa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(m)}
+function link(){var nm=$("bName").value,m="Namaste! 🙏 I'd like to enquire about a stay at "+NAME+" in Almora"+($("bIn").value?" from "+$("bIn").value:"")+($("bOut").value?" to "+$("bOut").value:"")+" for "+$("bG").value+" guest"+($("bG").value==="1"?"":"s")+". Is it available, and what are the rates?"+(nm?" My name is "+nm+".":"");$("bWa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(m)}
 ["bIn","bOut","bG","bName"].forEach(function(i){$(i).addEventListener("input",link)});link();
-$("heroWa").href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hi, I'm interested in staying at "+NAME+".");
+$("heroWa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(HELLO);
 </script>
 </body>
 </html>
