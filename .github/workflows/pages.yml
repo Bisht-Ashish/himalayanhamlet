@@ -26,11 +26,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build the Angular site
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+
       - name: Collect site files
         run: |
           mkdir _site
-          cp index.html _site/
-          if [ -d images ]; then cp -r images _site/images; fi
+          cp -r dist/himalayan-hamlet/browser/. _site/
 
       - name: Sync Airbnb calendar (booked dates only)
         continue-on-error: true
