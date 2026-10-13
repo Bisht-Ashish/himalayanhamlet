@@ -38,10 +38,20 @@ const server = http.createServer((req, res) => {
 await new Promise((r) => server.listen(4300, r));
 
 const failures = [];
+const oneLine = (t) => String(t).replace(/\s+/g, ' ').slice(0, 280);
 const check = (ok, msg) => {
   console.log((ok ? 'PASS ' : 'FAIL ') + msg);
-  if (!ok) failures.push(msg);
+  if (!ok) {
+    failures.push(msg);
+    console.log('::error title=Smoke check failed::' + oneLine(msg));
+  }
 };
+const crash = (e) => {
+  console.log('::error title=Smoke test crashed::' + oneLine(e && e.stack ? e.stack : e));
+  process.exit(1);
+};
+process.on('uncaughtException', crash);
+process.on('unhandledRejection', crash);
 
 fs.mkdirSync('smoke-out', { recursive: true });
 const browser = await chromium.launch();
