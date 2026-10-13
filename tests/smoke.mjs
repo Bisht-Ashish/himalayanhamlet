@@ -106,6 +106,7 @@ for (const [name, viewport] of [
 
   // Gallery lightbox
   await page.locator('.gbtn').first().click();
+  await page.waitForTimeout(250);
   check((await page.locator('.lb').count()) === 1, `${name}: gallery opens a large photo`);
   await page.keyboard.press('Escape');
   await page.waitForTimeout(100);
