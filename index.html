@@ -115,6 +115,11 @@ footer.site{background:#1c3638;box-shadow:0 0 0 100vmax #1c3638}
 footer.site{background:#dcebe4;color:#4a625c;box-shadow:0 0 0 100vmax #dcebe4}
 footer.site a{color:#4a625c}
 }
+.ph{display:block;width:100%;height:100%;object-fit:cover}
+.heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 70%}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,30,.72) 0%,rgba(8,20,30,.5) 45%,rgba(8,20,30,.05) 85%)}
+@media(prefers-color-scheme:light){.shade{background:linear-gradient(90deg,rgba(247,251,248,.9) 0%,rgba(247,251,248,.62) 40%,rgba(247,251,248,0) 76%)}}
+@media(max-width:760px){.shade{background:rgba(8,20,30,.55)}@media(prefers-color-scheme:light){.shade{background:rgba(247,251,248,.78)}}}
 .map{margin:16px 0 18px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 28px -14px rgba(20,25,60,.35)}
 .map iframe{display:block;width:100%;height:380px;border:0}
 @media(max-width:760px){.map iframe{height:300px}}
@@ -206,7 +211,7 @@ function art(h,i){var a="hsl("+h+",35%,";
 return '<svg class="art" viewBox="0 0 400 190" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Photo placeholder"><defs><linearGradient id="g'+i+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl('+h+',55%,80%)"/><stop offset="1" stop-color="hsl('+(h+25)+',65%,93%)"/></linearGradient></defs><rect width="400" height="190" fill="url(#g'+i+')"/><circle cx="90" cy="46" r="18" fill="#f5c542"/><path d="M0 120 L60 90 L120 112 L210 40 L270 95 L330 70 L400 110 V190 H0Z" fill="#fff" opacity=".85"/><path d="M0 135 L80 95 L160 130 L240 80 L320 125 L400 90 V190 H0Z" fill="'+a+'50%)"/><path d="M0 160 L100 120 L200 155 L300 118 L400 150 V190 H0Z" fill="'+a+'34%)"/><path d="M0 180 Q100 160 200 175 T400 168 V190 H0Z" fill="'+a+'22%)"/></svg>'}
 var $=function(i){return document.getElementById(i)};
 function scene(){var s='<svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">',i,x,h;for(i=0;i<70;i++){s+='<circle cx="'+((i*197)%1440)+'" cy="'+((i*89)%250)+'" r="'+(i%5?1:1.8)+'" fill="#fff" opacity="'+(.35+(i%4)*.15)+'"/>'}s+='<circle cx="1120" cy="340" r="170" fill="#f0b24a" opacity=".16"/><circle cx="1120" cy="340" r="62" fill="#ffd98a" opacity=".55"/><path d="M0 400 L120 330 L200 370 L330 250 L420 330 L520 290 L640 360 L780 215 L900 340 L1020 300 L1160 385 L1280 280 L1440 360 V560 H0Z" fill="#bcd5df" opacity=".65"/><path d="M0 455 L160 395 L300 445 L460 375 L620 445 L800 385 L980 455 L1160 400 L1300 445 L1440 405 V560 H0Z" fill="#8db6c0"/><path d="M0 505 L200 475 L420 508 L700 470 L980 512 L1220 480 L1440 505 V560 H0Z" fill="#5f9096"/>';for(i=0;i<40;i++){x=i*38+(i%3)*6;h=42+(i*7)%34;s+='<path d="M'+x+' 560 L'+(x+14)+' '+(560-h)+' L'+(x+28)+' 560Z" fill="#3e6f6e"/>'}return s+'</svg>'}
-$("bg").innerHTML=scene();$("r1").innerHTML=art(215,"a");$("r2").innerHTML=art(195,"b");
+$("bg").innerHTML=scene()+'<img class="heroimg" src="images/hero.webp" srcset="images/hero-800.webp 800w, images/hero.webp 1600w" sizes="100vw" width="1600" height="1066" alt="Himalayan Hamlet guest suite with a blue roof above the forested Almora valley and distant Himalayan peaks" fetchpriority="high" onerror="this.remove()"><div class="shade"></div>';$("r1").innerHTML='<img class="ph" src="images/bedroom1.webp" width="900" height="600" loading="lazy" alt="Bedroom with a king bed, wooden ceiling and doors opening to the garden and valley view" onerror="this.remove()">';$("r2").innerHTML=art(195,"b");
 $("gal").innerHTML=[205,215,195,185,225,175].map(function(h,i){return '<div class="art-box">'+art(h,"q"+i)+'</div>'}).join("");
 $("rate").innerHTML=PRICE?'<span style="font-weight:800;font-size:1.2rem;color:var(--ink)">₹'+PRICE.toLocaleString("en-IN")+'</span> per night for the whole suite':'Message us your dates for exact rates.';
 $("rev").innerHTML=REVIEWS.map(function(r){return '<blockquote><p>“'+r.t+'”</p><footer>'+r.n+'</footer></blockquote>'}).join("");
