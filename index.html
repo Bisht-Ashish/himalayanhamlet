@@ -115,6 +115,15 @@ footer.site{background:#1c3638;box-shadow:0 0 0 100vmax #1c3638}
 footer.site{background:#dcebe4;color:#4a625c;box-shadow:0 0 0 100vmax #dcebe4}
 footer.site a{color:#4a625c}
 }
+.cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:0 0 20px}
+.mo{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.mo h3{margin:0 0 8px;font-size:1rem;font-family:Fraunces,Georgia,serif}
+.dg{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center;font-size:.82rem}
+.dg i{font-style:normal;color:var(--mute);font-size:.72rem}
+.dg span{padding:5px 0;border-radius:8px}
+.dg .b{background:rgba(190,70,60,.14);color:var(--mute);text-decoration:line-through}
+.dg .p{opacity:.35}
+.dg .t{outline:2px solid var(--accent)}
 .ph{display:block;width:100%;height:100%;object-fit:cover}
 .heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 70%}
 .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,30,.72) 0%,rgba(8,20,30,.5) 45%,rgba(8,20,30,.05) 85%)}
@@ -182,6 +191,7 @@ footer.site a{color:#4a625c}
 <details><summary>Safety</summary><p>Smoke and carbon monoxide alarms are not installed. Please use the heaters and chulha with care.</p></details></section>
 
 <section id="book"><h2>Check dates and enquire</h2>
+<div id="calwrap" hidden><p class="note" style="margin-bottom:10px">Availability for the next four months. Crossed-out days are not available. It follows our Airbnb calendar, which can lag by a few hours, so please confirm by message.</p><div class="cal" id="cal"></div></div>
 <form onsubmit="return false">
 <label>Check-in<input type="date" id="bIn"></label><label>Check-out<input type="date" id="bOut"></label>
 <label>Guests<select id="bG"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></label>
@@ -218,9 +228,20 @@ $("rev").innerHTML=REVIEWS.map(function(r){return '<blockquote><p>“'+r.t+'”<
 $("stWa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(HELLO);
 try{fetch("https://api.open-meteo.com/v1/forecast?latitude=29.6225&longitude=79.6743&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FKolkata&forecast_days=5").then(function(r){return r.json()}).then(function(w){var d=w.daily;$("wx").innerHTML=d.time.map(function(x,i){return '<div>'+new Date(x).toLocaleDateString("en-IN",{weekday:"short"})+'<b>'+Math.round(d.temperature_2m_max[i])+'° / '+Math.round(d.temperature_2m_min[i])+'°</b>Rain '+d.precipitation_probability_max[i]+'%</div>'}).join("")}).catch(function(){})}catch(e){}
 var BOOKED=[];
+function drawCal(){var wrap=$("calwrap");if(!BOOKED.length){wrap.hidden=true;return}
+function iso(d){return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
+var now=new Date(),y=now.getFullYear(),m=now.getMonth(),today=iso(now),html="",k,d,first,s,cls,c;
+for(k=0;k<4;k++){first=new Date(y,m+k,1);
+html+='<div class="mo"><h3>'+first.toLocaleDateString("en-IN",{month:"long",year:"numeric"})+'</h3><div class="dg">'+"SMTWTFS".split("").map(function(x){return"<i>"+x+"</i>"}).join("");
+for(c=0;c<first.getDay();c++)html+="<em></em>";
+for(d=1;d<=new Date(y,m+k+1,0).getDate();d++){s=iso(new Date(y,m+k,d));
+cls=s<today?"p":BOOKED.some(function(r){return s>=r.start&&s<r.end})?"b":"f";if(s===today)cls+=" t";
+html+='<span class="'+cls+'">'+d+"</span>"}
+html+="</div></div>"}
+$("cal").innerHTML=html;wrap.hidden=false}
 function check(){var a=$("bIn").value,b=$("bOut").value,el=$("avail");el.textContent="";if(!a||!b||!BOOKED.length)return;if(b<=a){el.textContent="Check-out must be after check-in.";return}el.textContent=BOOKED.some(function(r){return a<r.end&&b>r.start})?"Those dates look booked. Message us anyway, as the calendar can lag by a few hours.":"These dates look free. Send your enquiry to confirm."}
 ["bIn","bOut"].forEach(function(i){$(i).addEventListener("input",check)});
-try{fetch("booked.json").then(function(r){return r.ok?r.json():[]}).then(function(d){BOOKED=d;check()}).catch(function(){})}catch(e){}
+try{fetch("booked.json").then(function(r){return r.ok?r.json():[]}).then(function(d){BOOKED=d;check();drawCal()}).catch(function(){})}catch(e){}
 var t=new Date().toISOString().slice(0,10);$("bIn").min=t;$("bOut").min=t;
 function link(){var nm=$("bName").value,m="Namaste! 🙏 I'd like to enquire about a stay at "+NAME+" in Almora"+($("bIn").value?" from "+$("bIn").value:"")+($("bOut").value?" to "+$("bOut").value:"")+" for "+$("bG").value+" guest"+($("bG").value==="1"?"":"s")+". Is it available, and what are the rates?"+(nm?" My name is "+nm+".":"");$("bWa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(m)}
 ["bIn","bOut","bG","bName"].forEach(function(i){$(i).addEventListener("input",link)});link();
