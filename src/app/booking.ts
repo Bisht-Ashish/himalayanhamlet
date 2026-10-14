@@ -29,7 +29,7 @@ function iso(d: Date): string {
 <section class="sec" id="book">
   <div class="wrap" appReveal>
     <div class="book">
-      <h2>Check dates and enquire</h2>
+      <h2>Availability</h2>
       <div class="book-grid" [class.solo]="!avail.booked().length">
         @if (avail.booked().length) {
           <div>
@@ -54,22 +54,21 @@ function iso(d: Date): string {
             </div>
           </div>
         }
-        <form class="fcard" (submit)="$event.preventDefault()">
-          <label>Check-in<input type="date" [min]="today" [value]="q.checkIn()" (input)="q.checkIn.set($any($event.target).value)"></label>
-          <label>Check-out<input type="date" [min]="today" [value]="q.checkOut()" (input)="q.checkOut.set($any($event.target).value)"></label>
-          <label>Guests
-            <select (change)="q.guests.set($any($event.target).value)">
-              @for (n of guestOptions; track n) {
-                <option [value]="n" [selected]="n === q.guests()">{{ n }}</option>
-              }
-            </select>
-          </label>
-          <label>Your name<input autocomplete="name" [value]="q.guestName()" (input)="q.guestName.set($any($event.target).value)"></label>
-          <p class="perk full"><b>Book direct:</b> message us on WhatsApp for {{ site.directPerk }}.</p>
+        <div class="fcard">
+          <h3>Your dates</h3>
+          <p class="sel full">
+            @if (q.checkIn() && q.checkOut()) {
+              {{ q.checkIn() }} to {{ q.checkOut() }}, {{ q.guests() }} {{ q.guests() === '1' ? 'guest' : 'guests' }}
+            } @else {
+              Pick dates in the booking bar at the top, then come back here to check them against the calendar.
+            }
+          </p>
           <p class="note full" aria-live="polite">{{ message() }}</p>
+          <p class="perk full"><b>Book direct:</b> message us on WhatsApp for {{ site.directPerk }}.</p>
           <a class="btn full" [href]="q.link()" target="_blank" rel="noopener">Send enquiry on WhatsApp</a>
+          <a class="link full" href="#top">Change dates</a>
           <p class="note full">This opens WhatsApp with your details filled in. No payment is taken on this site.</p>
-        </form>
+        </div>
       </div>
     </div>
   </div>

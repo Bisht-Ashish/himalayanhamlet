@@ -224,3 +224,16 @@ details p{color:var(--mute);margin:0 0 20px;max-width:46em}
 .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Availability card and Instagram band */
+.fcard{display:flex;flex-direction:column;gap:12px}
+.fcard h3{font-size:1.2rem}
+.sel{margin:0;font-weight:600}
+.insta{padding:clamp(40px,6vw,72px) 0}
+.insta-in{display:flex;align-items:center;gap:clamp(16px,3vw,32px);flex-wrap:wrap}
+.insta-in>div{flex:1 1 320px}
+.insta h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:8px}
+.insta p{margin:0;color:var(--mute)}
+.ig-badge{display:grid;place-items:center;width:64px;height:64px;border-radius:20px;color:#fff;background:linear-gradient(45deg,#f9a03c,#e1306c 55%,#7e3bd0)}
+.ig-badge app-icon{width:32px;height:32px}
+.btn.ig{background:var(--ink);color:var(--bg)}
