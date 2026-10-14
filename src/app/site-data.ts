@@ -100,6 +100,7 @@ export const GALLERY = [
   { small: 'images/hero-800.webp', large: 'images/hero.webp', alt: 'The guest suite and garden above the valley' },
   { small: 'images/bedroom1.webp', large: 'images/bedroom1.webp', alt: 'Bedroom 1 with a king bed and wooden ceiling' },
   { small: 'images/bedroom2.webp', large: 'images/bedroom2.webp', alt: 'Bedroom 2 with a wooden sofa and mountain view' },
+  { small: 'images/bedroom1-b-800.webp', large: 'images/bedroom1-b.webp', alt: 'Bedroom 1 with a king bed, a writing desk and a red folk-art painting under the wooden ceiling' },
 ];
 
 export const NEARBY = [
