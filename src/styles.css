@@ -188,8 +188,13 @@ details p{color:var(--mute);margin:0 0 20px;max-width:46em}
 
 @media(max-width:900px){
   .hd nav{display:none}
-  .facts{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-  .fact{flex:0 0 auto;min-width:215px;scroll-snap-align:start}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fact{padding:16px 16px;gap:10px}
+  .fact+.fact{border-left:0}
+  .fact:nth-child(even){border-left:1px solid var(--line)}
+  .fact:nth-child(n+3){border-top:1px solid var(--line)}
+  .fact:last-child{grid-column:1/-1}
+  .fact app-icon{width:24px;height:24px}
   .split,.book-grid,.foot-grid,.book-grid.solo{grid-template-columns:minmax(0,1fr)}
   .split>*,.book-grid>*{min-width:0}
   .photo{aspect-ratio:4/3}
