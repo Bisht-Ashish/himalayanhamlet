@@ -52,7 +52,7 @@ export const STAY = {
     'Wake up to birdsong, watch the stars at night, and join in village life: try farming, or learn to make pahadi namak and bhaang ki chatni. Treks and birdwatching start close by.',
   ],
   highlights: [
-    { label: 'Self check-in', value: 'Lockbox, no waiting' },
+    { label: 'Parking', value: 'Roadside, then a 200 m walk' },
     { label: 'Views', value: 'Mountain, valley and garden' },
     { label: 'Workspace', value: 'Wi-Fi, 100 Mbps with backup' },
     { label: 'Hosts', value: 'Ashish and family, on site' },
