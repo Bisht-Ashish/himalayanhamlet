@@ -22,3 +22,7 @@ Thumbs.db
 # Python
 __pycache__/
 *.pyc
+
+# Smoke test output
+smoke-out/
+out-tsc/
