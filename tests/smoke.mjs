@@ -58,6 +58,7 @@ const browser = await chromium.launch();
 
 for (const [name, viewport] of [
   ['desktop', { width: 1280, height: 800 }],
+  ['small', { width: 340, height: 700 }],
   ['mobile', { width: 390, height: 800 }],
 ]) {
   const page = await browser.newPage({ viewport, colorScheme: 'light' });
@@ -104,6 +105,24 @@ for (const [name, viewport] of [
   const link = decodeURIComponent(await page.getAttribute('#book a.btn', 'href'));
   check(link.includes(plus(12)) && link.includes('2 guests'), `${name}: enquiry message carries the dates`);
 
+  // Booking form: every field and button stays inside the form box, nothing overlaps
+  const formProblems = await page.evaluate(() => {
+    const R = (e) => e.getBoundingClientRect();
+    const form = R(document.querySelector('#book form'));
+    const els = [...document.querySelectorAll('#book form input, #book form select, #book form .btn')];
+    const bad = [];
+    els.forEach((e, i) => {
+      const r = R(e);
+      if (r.left < form.left - 0.5 || r.right > form.right + 0.5) bad.push('outside:' + (e.id || e.type || e.className));
+      for (let j = i + 1; j < els.length; j++) {
+        const b = R(els[j]);
+        if (r.left < b.right - 0.5 && b.left < r.right - 0.5 && r.top < b.bottom - 0.5 && b.top < r.bottom - 0.5) bad.push('overlap:' + i + '/' + j);
+      }
+    });
+    return bad;
+  });
+  check(formProblems.length === 0, `${name}: booking form fields fit and do not overlap ${formProblems.join(',')}`);
+
   // Gallery lightbox
   await page.locator('.gbtn').first().click();
   await page.waitForTimeout(250);
@@ -112,12 +131,12 @@ for (const [name, viewport] of [
   await page.waitForTimeout(100);
   check((await page.locator('.lb').count()) === 0, `${name}: Escape closes the large photo`);
 
-  if (name === 'mobile') {
+  if (name === 'mobile' || name === 'small') {
     check(
       !(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)),
-      'mobile: no sideways scrolling',
+      name + ': no sideways scrolling',
     );
-    check(await page.locator('.sticky').isVisible(), 'mobile: sticky contact bar is visible');
+    check(await page.locator('.sticky').isVisible(), name + ': sticky contact bar is visible');
   }
 
   await page.screenshot({ path: `smoke-out/${name}-top.png` });
