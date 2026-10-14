@@ -76,7 +76,7 @@ for (const [name, viewport] of [
 
   check(errors.length === 0, `${name}: no page errors ${errors.join(' | ')}`);
   check((await page.textContent('h1')).includes('Wake up to Nanda Devi'), `${name}: headline shows`);
-  check((await page.locator('.strip div').count()) === 5, `${name}: five fact tiles`);
+  check((await page.locator('.fact').count()) === 5, `${name}: five fact tiles`);
   check((await page.locator('section').count()) >= 10, `${name}: all sections render`);
   check(
     await page.evaluate(() => {

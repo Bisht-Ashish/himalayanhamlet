@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { SITE, waLink } from './site-data';
+import { Component, inject } from '@angular/core';
+import { Enquiry } from './enquiry';
 
 @Component({
   selector: 'app-sticky-bar',
@@ -7,9 +7,9 @@ import { SITE, waLink } from './site-data';
   template: `
 <div class="sticky">
   <a class="btn" href="#book">Check dates</a>
-  <a class="btn alt" [href]="wa" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn line" [href]="q.link()" target="_blank" rel="noopener">WhatsApp</a>
 </div>`,
 })
 export class StickyBar {
-  readonly wa = waLink(SITE.greeting);
+  readonly q = inject(Enquiry);
 }

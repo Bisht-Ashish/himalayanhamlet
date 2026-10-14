@@ -1,18 +1,22 @@
 import { Component } from '@angular/core';
+import { Reveal } from './reveal';
 import { RATINGS, REVIEWS, SITE } from './site-data';
 
 @Component({
   selector: 'app-reviews',
+  imports: [Reveal],
   styles: ':host{display:block}',
   template: `
-<section id="reviews">
-  <h2>What guests say</h2>
-  <div class="rev">
-    @for (r of reviews; track $index) {
-      <blockquote><p>“{{ r.text }}”</p><footer>{{ r.by }}</footer></blockquote>
-    }
+<section class="sec" id="reviews">
+  <div class="wrap" appReveal>
+    <h2>What guests say</h2>
+    <div class="rev">
+      @for (r of reviews; track $index) {
+        <blockquote><p>“{{ r.text }}”</p><footer>{{ r.by }}</footer></blockquote>
+      }
+    </div>
+    <a class="link" [href]="airbnb" target="_blank" rel="noopener">Read all {{ count }} reviews on Airbnb</a>
   </div>
-  <p style="margin-top:14px"><a [href]="airbnb" target="_blank" rel="noopener" style="color:var(--brand)">Read all {{ count }} reviews on Airbnb</a></p>
 </section>`,
 })
 export class Reviews {

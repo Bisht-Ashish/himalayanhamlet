@@ -6,6 +6,7 @@ import { Facts } from './facts';
 import { Faq } from './faq';
 import { SiteFooter } from './footer';
 import { Gallery } from './gallery';
+import { Header } from './header';
 import { Hero } from './hero';
 import { Hosts } from './hosts';
 import { Reviews } from './reviews';
@@ -18,12 +19,13 @@ import { WeatherSection } from './weather-section';
 @Component({
   selector: 'app-root',
   imports: [
-    Hero, Facts, Stay, Rooms, Amenities, Seasons, Gallery, Around, Hosts,
+    Header, Hero, Facts, Stay, Rooms, Amenities, Seasons, Gallery, Around, Hosts,
     WeatherSection, Reviews, Faq, Booking, SiteFooter, StickyBar,
   ],
   template: `
-<app-hero />
-<div class="wrap">
+<app-header />
+<main>
+  <app-hero />
   <app-facts />
   <app-stay />
   <app-rooms />
@@ -36,8 +38,8 @@ import { WeatherSection } from './weather-section';
   <app-reviews />
   <app-faq />
   <app-booking />
-  <app-footer />
-</div>
+</main>
+<app-footer />
 <app-sticky-bar />`,
 })
 export class App {}

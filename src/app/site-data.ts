@@ -11,6 +11,8 @@ export const SITE = {
   nightlyRate: 0, // rupees per night; 0 shows "Message us your dates"
   directPerk:
     '[your direct-booking perk, for example a welcome chai or flexible check-out]',
+  instagramUrl: 'https://instagram.com/himalayan_hamlet',
+  instagramHandle: '@himalayan_hamlet',
   airbnbUrl: 'https://www.airbnb.co.in/rooms/40210492',
   mapsUrl: 'https://maps.app.goo.gl/jnBMKa5w9RrQqQQC7',
   mapEmbedUrl:
@@ -25,10 +27,10 @@ export function waLink(text: string): string {
 
 export const NAV = [
   { href: '#stay', label: 'The stay' },
-  { href: '#amenities', label: 'Amenities' },
+  { href: '#rooms', label: 'Rooms' },
+  { href: '#gallery', label: 'Gallery' },
   { href: '#around', label: 'Around Almora' },
   { href: '#faq', label: 'FAQ' },
-  { href: '#book', label: 'Book' },
 ];
 
 export const HERO = {
@@ -39,11 +41,11 @@ export const HERO = {
 };
 
 export const FACTS = [
-  { title: '2 bedrooms', text: 'King + double' },
-  { title: 'Up to 4 guests', text: 'Whole first floor' },
-  { title: 'Balcony', text: 'Himalayan view' },
-  { title: 'Kitchen', text: 'Fridge, oven, chulha' },
-  { title: 'Wi-Fi', text: '100 Mbps + backup' },
+  { icon: 'bed', title: '2 bedrooms', text: 'King + double' },
+  { icon: 'users', title: 'Up to 4 guests', text: 'Whole first floor' },
+  { icon: 'mountain', title: 'Balcony', text: 'Himalayan view' },
+  { icon: 'utensils', title: 'Kitchen', text: 'Fridge, oven, chulha' },
+  { icon: 'wifi', title: 'Wi-Fi', text: '100 Mbps + backup' },
 ];
 
 export const STAY = {
@@ -52,7 +54,7 @@ export const STAY = {
     'Wake up to birdsong, watch the stars at night, and join in village life: try farming, or learn to make pahadi namak and bhaang ki chatni. Treks and birdwatching start close by.',
   ],
   highlights: [
-    { label: 'Parking', value: 'Roadside, then a 200 m walk' },
+    { label: 'Parking', value: 'Street parking, away from the main road' },
     { label: 'Views', value: 'Mountain, valley and garden' },
     { label: 'Workspace', value: 'Wi-Fi, 100 Mbps with backup' },
     { label: 'Hosts', value: 'Ashish and family, on site' },
@@ -75,24 +77,24 @@ export const ROOMS = [
 ];
 
 export const AMENITIES = [
-  'Private balcony with Himalayan view',
-  'Kitchen with fridge and oven',
-  'Traditional chulha for outdoor cooking',
-  'Hot water (geysers in bathrooms)',
-  'Room heaters',
-  'Extra bedding and towels',
-  'RO water purifier',
-  '100 Mbps broadband, 20 Mbps backup',
-  'Dedicated workspace',
-  'Power backup',
-  'Garden',
-  'Meals on request (extra)',
+  { icon: 'mountain', text: 'Private balcony with Himalayan view' },
+  { icon: 'utensils', text: 'Kitchen with fridge and oven' },
+  { icon: 'flame', text: 'Traditional chulha for outdoor cooking' },
+  { icon: 'drop', text: 'Hot water (geysers in bathrooms)' },
+  { icon: 'thermo', text: 'Room heaters' },
+  { icon: 'layers', text: 'Extra bedding and towels' },
+  { icon: 'drop', text: 'RO water purifier' },
+  { icon: 'wifi', text: '100 Mbps broadband, 20 Mbps backup' },
+  { icon: 'laptop', text: 'Dedicated workspace' },
+  { icon: 'plug', text: 'Power backup' },
+  { icon: 'leaf', text: 'Garden' },
+  { icon: 'cup', text: 'Meals on request (extra)' },
 ];
 
 export const SEASONS = [
-  { name: 'Summer', text: 'Sharp sunrises, fresh air, snow-capped peaks.' },
-  { name: 'Monsoon', text: 'Cloud inversions, deep greens, seasonal flowers.' },
-  { name: 'Winter', text: 'Snowfall, starry skies, bonfires and white peaks.' },
+  { cls: 'summer', name: 'Summer', text: 'Sharp sunrises, fresh air, snow-capped peaks.' },
+  { cls: 'monsoon', name: 'Monsoon', text: 'Cloud inversions, deep greens, seasonal flowers.' },
+  { cls: 'winter', name: 'Winter', text: 'Snowfall, starry skies, bonfires and white peaks.' },
 ];
 
 // Add more photos here and they appear in the gallery automatically.
