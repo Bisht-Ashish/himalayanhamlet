@@ -8,6 +8,7 @@ import { SiteFooter } from './footer';
 import { Gallery } from './gallery';
 import { Header } from './header';
 import { Hero } from './hero';
+import { InstagramBand } from './instagram';
 import { Hosts } from './hosts';
 import { Reviews } from './reviews';
 import { Rooms } from './rooms';
@@ -19,7 +20,7 @@ import { WeatherSection } from './weather-section';
 @Component({
   selector: 'app-root',
   imports: [
-    Header, Hero, Facts, Stay, Rooms, Amenities, Seasons, Gallery, Around, Hosts,
+    Header, Hero, InstagramBand, Facts, Stay, Rooms, Amenities, Seasons, Gallery, Around, Hosts,
     WeatherSection, Reviews, Faq, Booking, SiteFooter, StickyBar,
   ],
   template: `
@@ -38,6 +39,7 @@ import { WeatherSection } from './weather-section';
   <app-reviews />
   <app-faq />
   <app-booking />
+  <app-instagram />
 </main>
 <app-footer />
 <app-sticky-bar />`,

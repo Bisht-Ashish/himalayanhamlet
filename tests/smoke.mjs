@@ -93,7 +93,7 @@ for (const [name, viewport] of [
   check((await page.locator('iframe[src*="google.com/maps/embed"]').count()) === 1, `${name}: map embed present`);
 
   // Booking form: booked dates warn, free dates do not
-  const dates = page.locator('#book input[type=date]');
+  const dates = page.locator('.bar input[type=date]');
   await dates.nth(0).fill(booked[0].start);
   await dates.nth(1).fill(plus(7));
   await page.waitForTimeout(150);
@@ -108,8 +108,8 @@ for (const [name, viewport] of [
   // Booking form: every field and button stays inside the form box, nothing overlaps
   const formProblems = await page.evaluate(() => {
     const R = (e) => e.getBoundingClientRect();
-    const form = R(document.querySelector('#book form'));
-    const els = [...document.querySelectorAll('#book form input, #book form select, #book form .btn')];
+    const form = R(document.querySelector('.bar'));
+    const els = [...document.querySelectorAll('.bar input, .bar select, .bar .btn')];
     const bad = [];
     els.forEach((e, i) => {
       const r = R(e);
