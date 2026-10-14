@@ -107,11 +107,13 @@ export const GALLERY = [
 
 export const NEARBY = [
   { label: 'Mrig Vihar Zoo', value: '2 km' },
+  { label: 'Kasar Devi', value: '3 km' },
   { label: 'Nanda Devi Temple', value: '4 km' },
-  { label: 'Kasar Devi', value: '5 km' },
+  { label: 'Chitai Temple', value: '6 km' },
+  { label: 'Binsar', value: '12 km' },
   { label: 'Paragliding', value: '20 km' },
+  { label: 'Sun Temple (Katarmal)', value: '20 km' },
   { label: 'Jageshwar Dham', value: '33 km' },
-  { label: 'Binsar and Simtola', value: 'Day treks' },
 ];
 
 export const RATINGS = {
