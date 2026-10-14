@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { Reveal } from './reveal';
 import { HOSTS } from './site-data';
 
 @Component({
   selector: 'app-hosts',
+  imports: [Reveal],
   styles: ':host{display:block}',
   template: `
-<section id="hosts">
-  <div class="two">
+<section class="sec" id="hosts">
+  <div class="wrap split top hosts" appReveal>
     <div>
       <h2>Meet your hosts</h2>
       <p>{{ hosts.text }}</p>
@@ -14,12 +16,11 @@ import { HOSTS } from './site-data';
     </div>
     <div>
       <h2>A day at the Hamlet</h2>
-      <ul class="list">
+      <ul class="rows">
         @for (d of hosts.day; track d.label) {
           <li>{{ d.label }}<span>{{ d.value }}</span></li>
         }
       </ul>
-      <p class="note" style="margin-top:8px">Example plan. Edit to match what you offer.</p>
     </div>
   </div>
 </section>`,

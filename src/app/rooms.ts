@@ -1,36 +1,38 @@
 import { Component } from '@angular/core';
-import { ROOMS, SITE } from './site-data';
+import { Reveal } from './reveal';
+import { ROOMS, SITE, waLink } from './site-data';
 
 @Component({
   selector: 'app-rooms',
+  imports: [Reveal],
   styles: ':host{display:block}',
   template: `
-<section id="rooms">
-  <h2>Bedrooms</h2>
-  <div class="cards">
-    @for (r of rooms; track r.name) {
-      <div class="c">
-        <div class="art-box"><img class="ph" [src]="r.photo" [alt]="r.alt" width="900" height="600" loading="lazy"></div>
-        <div class="cb"><h3>{{ r.name }}</h3><p>{{ r.text }}</p></div>
+<section class="sec alt" id="rooms">
+  <div class="wrap" appReveal>
+    <h2>Two bedrooms</h2>
+    <div class="rooms">
+      @for (r of rooms; track r.name) {
+        <div class="room">
+          <div class="photo"><img [src]="r.photo" [alt]="r.alt" width="900" height="600" loading="lazy"></div>
+          <h3>{{ r.name }}</h3>
+          <p>{{ r.text }}</p>
+        </div>
+      }
+    </div>
+    @if (rate) {
+      <div class="rate">
+        <div>
+          <h3>Rates</h3>
+          <p><strong>{{ rate }}</strong> per night for the whole suite. Meals are extra, and prices change by season and weekend.</p>
+        </div>
+        <a class="btn" [href]="ask" target="_blank" rel="noopener">Ask for rates</a>
       </div>
     }
-    <div class="c">
-      <div class="cb">
-        <h3>Rates</h3>
-        <p>
-          @if (rate) {
-            <span style="font-weight:800;font-size:1.2rem;color:var(--ink)">{{ rate }}</span> per night for the whole suite
-          } @else {
-            Message us your dates for exact rates.
-          }
-        </p>
-        <p style="margin-top:8px">Meals are extra. Prices change by season and weekend.</p>
-      </div>
-    </div>
   </div>
 </section>`,
 })
 export class Rooms {
   readonly rooms = ROOMS;
   readonly rate = SITE.nightlyRate ? '₹' + SITE.nightlyRate.toLocaleString('en-IN') : '';
+  readonly ask = waLink(SITE.greeting);
 }
