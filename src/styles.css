@@ -40,7 +40,7 @@ p{margin:0 0 1em}
 .site-header.solid{background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--ink);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;min-height:64px}
 .brand{display:flex;align-items:center;gap:10px;font:700 1.15rem/1 var(--serif);text-decoration:none;color:inherit}
-.brand svg{width:28px;height:28px;color:var(--honey)}
+.brand app-icon{flex:none;width:26px;height:26px;color:var(--honey)}
 .hd nav{display:flex;align-items:center;gap:26px}
 .hd nav a:not(.btn){text-decoration:none;font-weight:500;font-size:.95rem;opacity:.92}
 .hd nav a:not(.btn):hover{opacity:1}
@@ -69,7 +69,7 @@ p{margin:0 0 1em}
 .facts{display:grid;grid-template-columns:repeat(5,1fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
 .fact{display:flex;align-items:center;gap:12px;padding:20px 22px;min-width:0}
 .fact+.fact{border-left:1px solid var(--line)}
-.fact svg{flex:none;width:28px;height:28px;color:var(--teal)}
+.fact app-icon{flex:none;width:28px;height:28px;color:var(--teal)}
 .fact b{display:block;font-weight:600;font-size:1rem;line-height:1.25}
 .fact span{display:block;color:var(--mute);font-size:.88rem;line-height:1.3}
 
@@ -96,7 +96,7 @@ p{margin:0 0 1em}
 .amen{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px 28px;list-style:none;margin:0;padding:0}
 .amen li{display:flex;align-items:center;gap:14px}
 .ico{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--band);color:var(--teal)}
-.ico svg{width:22px;height:22px}
+.ico app-icon{width:22px;height:22px}
 .alt .ico{background:var(--surface)}
 
 /* seasons */
