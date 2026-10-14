@@ -5,8 +5,8 @@
   --pine:#14403a; --teal:#1b6f64; --honey:#e2a23b; --honey-ink:#2a1c06;
   --r-lg:28px; --r-md:20px;
   --shadow:0 28px 60px -34px rgba(12,48,54,.5);
-  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
 @media(prefers-color-scheme:dark){:root{
   --bg:#0e1b1d; --surface:#152629; --band:#112225; --ink:#e7f0ef; --mute:#9db3b4; --line:#26393c;
@@ -17,9 +17,9 @@ html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%}
 a{color:inherit}
-h1,h2,h3{margin:0;font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.05}
+h1,h2,h3{margin:0;font-family:var(--serif);font-weight:700;letter-spacing:-.025em;line-height:1.1}
 h2{font-size:clamp(1.9rem,3.8vw,2.8rem);margin-bottom:20px}
-h3{font-size:1.7rem}
+h3{font-size:1.3rem}
 p{margin:0 0 1em}
 :focus-visible{outline:3px solid var(--honey);outline-offset:3px;border-radius:6px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
@@ -39,7 +39,7 @@ p{margin:0 0 1em}
 .site-header{position:fixed;inset:0 0 auto 0;z-index:30;color:#fff;padding-top:env(safe-area-inset-top,0px);transition:background .25s,color .25s,box-shadow .25s}
 .site-header.solid{background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--ink);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;min-height:64px}
-.brand{display:flex;align-items:center;gap:10px;font:400 1.4rem/1 var(--serif);text-decoration:none;color:inherit}
+.brand{display:flex;align-items:center;gap:10px;font:700 1.15rem/1 var(--serif);text-decoration:none;color:inherit}
 .brand svg{width:28px;height:28px;color:var(--honey)}
 .hd nav{display:flex;align-items:center;gap:26px}
 .hd nav a:not(.btn){text-decoration:none;font-weight:500;font-size:.95rem;opacity:.92}
@@ -51,7 +51,7 @@ p{margin:0 0 1em}
 .heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 58%;z-index:-2}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,28,30,.6) 0%,rgba(6,28,30,.08) 26%,rgba(6,28,30,.12) 44%,rgba(6,28,30,.82) 100%)}
 .hero-in{width:100%;padding-top:104px;padding-bottom:52px}
-.hero h1{font-size:clamp(2.2rem,5.2vw,4.1rem);max-width:15em;line-height:1.02;letter-spacing:-.02em;text-shadow:0 2px 30px rgba(0,0,0,.28)}
+.hero h1{font-size:clamp(2.2rem,5.2vw,4.1rem);max-width:15em;line-height:1.08;letter-spacing:-.03em;text-shadow:0 2px 30px rgba(0,0,0,.28)}
 .hero .lead{font-size:clamp(1rem,1.5vw,1.15rem);max-width:34em;margin:18px 0 22px;color:rgba(255,255,255,.93)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
 .chip{display:inline-flex;align-items:center;padding:7px 15px;border-radius:99px;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);font-size:.9rem;font-weight:500}
