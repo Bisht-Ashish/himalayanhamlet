@@ -64,7 +64,9 @@ function iso(d: Date): string {
             }
           </p>
           <p class="note full" aria-live="polite">{{ message() }}</p>
-          <p class="perk full"><b>Book direct:</b> message us on WhatsApp for {{ site.directPerk }}.</p>
+          @if (site.directPerk) {
+            <p class="perk full"><b>Book direct:</b> message us on WhatsApp for {{ site.directPerk }}.</p>
+          }
           <a class="btn full" [href]="q.link()" target="_blank" rel="noopener">Send enquiry on WhatsApp</a>
           <a class="link full" href="#top">Change dates</a>
           <p class="note full">This opens WhatsApp with your details filled in. No payment is taken on this site.</p>

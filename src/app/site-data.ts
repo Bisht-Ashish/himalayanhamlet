@@ -9,8 +9,7 @@ export const SITE = {
   greeting:
     "Namaste! 🙏 I found Himalayan Hamlet on your website and I'd like to enquire about a stay in Almora. Could you please share availability and rates?",
   nightlyRate: 0, // rupees per night; 0 shows "Message us your dates"
-  directPerk:
-    '[your direct-booking perk, for example a welcome chai or flexible check-out]',
+  directPerk: '', // optional: a direct-booking perk, shown only when filled in
   instagramUrl: 'https://instagram.com/himalayan_hamlet',
   instagramHandle: '@himalayan_hamlet',
   airbnbUrl: 'https://www.airbnb.co.in/rooms/40210492',
