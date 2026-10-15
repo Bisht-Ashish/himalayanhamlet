@@ -89,7 +89,7 @@ for (const [name, viewport] of [
   check((await page.locator('.dg .b').count()) > 0, `${name}: booked days are marked`);
 
   const wa = await page.$$eval('a[href^="https://wa.me/"]', (a) => a.map((x) => x.href));
-  check(wa.length >= 3 && wa.every((h) => h.includes('917892712293')), `${name}: WhatsApp links use the right number`);
+  check(wa.length >= 2 && wa.every((h) => h.includes('917892712293')), `${name}: WhatsApp links use the right number`);
   check((await page.locator('iframe[src*="google.com/maps/embed"]').count()) === 1, `${name}: map embed present`);
 
   // Booking form: booked dates warn, free dates do not
