@@ -15,7 +15,9 @@ import { FOOTER_LINKS, SITE } from './site-data';
     </div>
     <div>
       <p>{{ site.phone }}</p>
-      <p>{{ site.email }}</p>
+      @if (site.email) {
+        <p>{{ site.email }}</p>
+      }
       <a [href]="site.instagramUrl" target="_blank" rel="noopener">Instagram {{ site.instagramHandle }}</a>
     </div>
     <div>

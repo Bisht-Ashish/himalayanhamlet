@@ -5,7 +5,7 @@ export const SITE = {
   name: 'Himalayan Hamlet',
   whatsapp: '917892712293', // country code, no +
   phone: '+91 78927 12293',
-  email: 'hello@yourdomain.in',
+  email: '', // add a real address here once you have one; it then appears in the footer
   greeting:
     "Namaste! 🙏 I found Himalayan Hamlet on your website and I'd like to enquire about a stay in Almora. Could you please share availability and rates?",
   nightlyRate: 0, // rupees per night; 0 shows "Message us your dates"
