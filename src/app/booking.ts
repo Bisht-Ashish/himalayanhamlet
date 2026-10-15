@@ -30,48 +30,33 @@ function iso(d: Date): string {
   <div class="wrap" appReveal>
     <div class="book">
       <h2>Availability</h2>
-      <div class="book-grid" [class.solo]="!avail.booked().length">
-        @if (avail.booked().length) {
-          <div>
-            <p class="note">Availability for the next four months. Crossed-out days are not available. It follows our Airbnb calendar, which can lag by a few hours, so please confirm by message.</p>
-            <div class="cal">
-              @for (m of months(); track m.title) {
-                <div class="mo">
-                  <h3>{{ m.title }}</h3>
-                  <div class="dg">
-                    @for (w of weekdays; track $index) {
-                      <i>{{ w }}</i>
-                    }
-                    @for (b of m.blanks; track b) {
-                      <em></em>
-                    }
-                    @for (d of m.days; track d.n) {
-                      <span [class]="d.cls">{{ d.n }}</span>
-                    }
-                  </div>
-                </div>
-              }
+      @if (avail.booked().length) {
+        <p class="note">Crossed-out days are not available. This follows our Airbnb calendar, which can lag by a few hours, so please confirm by message.</p>
+        <div class="cal">
+          @for (m of months(); track m.title) {
+            <div class="mo">
+              <h3>{{ m.title }}</h3>
+              <div class="dg">
+                @for (w of weekdays; track $index) {
+                  <i>{{ w }}</i>
+                }
+                @for (b of m.blanks; track b) {
+                  <em></em>
+                }
+                @for (d of m.days; track d.n) {
+                  <span [class]="d.cls">{{ d.n }}</span>
+                }
+              </div>
             </div>
-          </div>
-        }
-        <div class="fcard">
-          <h3>Your dates</h3>
-          <p class="sel full">
-            @if (q.checkIn() && q.checkOut()) {
-              {{ q.checkIn() }} to {{ q.checkOut() }}, {{ q.guests() }} {{ q.guests() === '1' ? 'guest' : 'guests' }}
-            } @else {
-              Pick dates in the booking bar at the top, then come back here to check them against the calendar.
-            }
-          </p>
-          <p class="note full" aria-live="polite">{{ message() }}</p>
-          @if (site.directPerk) {
-            <p class="perk full"><b>Book direct:</b> message us on WhatsApp for {{ site.directPerk }}.</p>
           }
-          <a class="btn full" [href]="q.link()" target="_blank" rel="noopener">Send enquiry on WhatsApp</a>
-          <a class="link full" href="#top">Change dates</a>
-          <p class="note full">This opens WhatsApp with your details filled in. No payment is taken on this site.</p>
         </div>
-      </div>
+      } @else {
+        <p class="note">Message us your dates and we will confirm availability.</p>
+      }
+      <p class="avail-msg" aria-live="polite">{{ message() }}</p>
+      @if (site.directPerk) {
+        <p class="perk">Book direct: message us on WhatsApp for {{ site.directPerk }}.</p>
+      }
     </div>
   </div>
 </section>`,

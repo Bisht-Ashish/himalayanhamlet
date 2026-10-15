@@ -102,7 +102,7 @@ for (const [name, viewport] of [
   await dates.nth(1).fill(plus(14));
   await page.waitForTimeout(150);
   check((await page.textContent('#book p[aria-live]')).includes('look free'), `${name}: free dates are accepted`);
-  const link = decodeURIComponent(await page.getAttribute('#book a.btn', 'href'));
+  const link = decodeURIComponent(await page.getAttribute('.bar a.btn', 'href'));
   check(link.includes(plus(12)) && link.includes('2 guests'), `${name}: enquiry message carries the dates`);
 
   // Booking form: every field and button stays inside the form box, nothing overlaps
