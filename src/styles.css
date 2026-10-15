@@ -157,7 +157,9 @@ details p{color:var(--mute);margin:0 0 20px;max-width:46em}
 .book-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
 .book-grid.solo{grid-template-columns:minmax(0,560px)}
 .book .note{color:rgba(255,255,255,.72);margin-bottom:14px}
-.cal{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media(min-width:701px) and (max-width:1000px){.cal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.avail-msg{margin:16px 0 0;font-weight:600;min-height:1.6em}
 .mo{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-md);padding:14px 16px;min-width:0}
 .mo h3{font-size:1.3rem;margin:0 0 8px;color:#fff}
 .dg{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center;font-size:.8rem}
@@ -208,8 +210,7 @@ details p{color:var(--mute);margin:0 0 20px;max-width:46em}
   .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
   .gal .gbtn:nth-child(1){grid-column:span 2;grid-row:span 2}
   .gal .gbtn:nth-child(4){grid-column:span 2}
-  .cal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px}
-  .mo{flex:0 0 80%;scroll-snap-align:start}
+  .cal{grid-template-columns:minmax(0,1fr);gap:12px}
   .map,.map iframe{min-height:320px}
 }
 @media(max-width:700px){
