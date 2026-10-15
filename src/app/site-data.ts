@@ -155,7 +155,7 @@ export const FAQ = [
   { q: 'Can my driver stay?', a: 'There is no driver accommodation at the homestay. We can help you find a budget place nearby.' },
   { q: 'Are meals available?', a: 'Breakfast, lunch and dinner can be prepared at extra cost. You can also cook in the kitchen.' },
   { q: 'How do I book and pay?', a: 'Send your dates on WhatsApp. We confirm availability and share payment details. [Edit: advance amount and cancellation policy]' },
-  { q: 'Safety', a: 'Smoke and carbon monoxide alarms are not installed. Please use the heaters and chulha with care.' },
+  { q: 'Is it safe, especially in winter?', a: "The family lives on the ground floor, so someone is always close by. Please use the room heaters and the chulha with care, and keep the room ventilated while they run. The house does not have smoke or carbon monoxide alarms, so we are happy to show you how to use everything safely when you arrive." },
 ];
 
 export const FOOTER_LINKS = [
