@@ -128,7 +128,7 @@ export const RATINGS = {
 
 export const HOSTS = {
   text: 'Ashish is a software engineer who has lived in Almora for over 20 years. He runs Himalayan Hamlet with his parents, who live on the ground floor, so there is always someone to help with directions, meals or trek advice.',
-  note: 'Add a family photo here and a line about what you enjoy showing guests.',
+  note: '', // optional line shown under the hosts text
   day: [
     { label: 'Sunrise', value: 'Chai on the balcony, peaks turning gold' },
     { label: 'Morning', value: 'Breakfast, then a village or farm walk' },
