@@ -138,7 +138,7 @@ export const HOSTS = {
 };
 
 export const REACH =
-  'Almora is about 90 km from Kathgodam railway station, roughly a 3 hour drive. Park at the road, then walk about 200 metres to the house. Message us before you set off and we will guide you the last stretch.';
+  'Almora is about 90 km from Kathgodam railway station, roughly a 3 hour drive. Park on the street, then walk about 300 metres to the house. Message us before you set off and we will guide you the last stretch.';
 
 // Real guest reviews from the Airbnb listing (first name only). Add or swap quotes here.
 export const REVIEWS = [
@@ -151,7 +151,7 @@ export const REVIEWS = [
 ];
 
 export const FAQ = [
-  { q: 'How far is the parking from the house?', a: 'You walk about 200 metres from the parking area, and the path is a little hilly. Tell us in advance if you travel with elders or heavy luggage.' },
+  { q: 'How far is the parking from the house?', a: 'It is about a 300 metre walk from the parking, along a path that slopes downhill to the house (and uphill when you leave). Tell us in advance if you travel with elders or heavy luggage.' },
   { q: 'Can my driver stay?', a: 'There is no driver accommodation at the homestay. We can help you find a budget place nearby.' },
   { q: 'Are meals available?', a: 'Breakfast, lunch and dinner can be prepared at extra cost. You can also cook in the kitchen.' },
   { q: 'How do I book and pay?', a: 'Send your dates on WhatsApp. We confirm availability and share payment details. [Edit: advance amount and cancellation policy]' },
