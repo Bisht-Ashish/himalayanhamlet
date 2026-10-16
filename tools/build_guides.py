@@ -87,6 +87,86 @@ PAGES.append(dict(
 ICON_LOGO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20l7-12 4 6 2.5-4L22 20z"/></svg>'
 ICON_IG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zM12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM17.5 6.5h.01"/></svg>'
 
+PAGES.append(dict(
+    slug="best-time-to-visit-almora",
+    title="Best time to visit Almora: month-by-month guide",
+    desc="Which months suit Almora for clear Himalayan views, pleasant weather, snow and quiet stays, from a local homestay host.",
+    h1="Best time to visit Almora, month by month",
+    lead="Almora sits at about 1,650 m, so it is cool even in summer and cold in winter. The right month depends on what you want: clear snow views, easy weather, or quiet.",
+    body=lambda: table(["Months", "What to expect", "Good for"], [
+        ["March to May", "Mild to warm days, cool evenings, rhododendrons in bloom " + chk("(check)"), "Families, first-time visitors, walks and temple visits"],
+        ["June", "Warmest month, hazier views, tourist rush on weekends " + chk("(check)"), "Escaping plains heat; book early"],
+        ["July to September", "Monsoon: green hills, heavy rain, some road disruption " + chk("(your advice on travelling in the rains)"), "Quiet, budget-friendly stays; travel with flexible dates"],
+        ["October and November", "Clear skies and the sharpest Himalayan views " + chk("(check)"), "Photography, Nanda Devi views, festival season"],
+        ["December to February", "Cold, crisp mornings, occasional snow in the higher hills " + chk("(how often does snow reach Almora town?)"), "Winter stays, bonfires, peaceful weeks"],
+    ]) + """
+<h2>Our pick</h2>
+<p>""" + chk("your own recommendation: which months do you enjoy most at the house, and why") + """</p>
+<h2>Planning your stay</h2>
+<ul>
+<li>See which dates are free on the <a href="../#book">availability calendar</a> and message us on WhatsApp.</li>
+<li>Read <a href="../how-to-reach-almora/">how to reach Almora</a> before you book transport.</li>
+<li>See what to do in <a href="../things-to-do-in-almora/">Almora and nearby</a>.</li>
+</ul>"""))
+
+PAGES.append(dict(
+    slug="what-to-eat-and-buy-in-almora",
+    title="What to eat and buy in Almora: bal mithai, singori and more",
+    desc="Almora's famous sweets, Kumaoni food and local things to buy in the main market, from a local homestay host.",
+    h1="What to eat and buy in Almora",
+    lead="Almora is known for its sweets, simple Kumaoni food and local crafts. Most of it is in the main market, near the Nanda Devi Temple.",
+    body=lambda: """
+<h2>Sweets to try</h2>
+<ul>
+<li><b>Bal mithai:</b> a brown fudge made from roasted khoya, coated in tiny sugar balls. Almora's best-known sweet.</li>
+<li><b>Singori:</b> a khoya sweet wrapped in a maalu leaf.</li>
+<li><b>Chocolate (a bal mithai cousin):</b> """ + chk("(optional: add a shop you recommend)") + """</li>
+</ul>
+<p>""" + chk("your tip: the shop you trust for bal mithai, and the price range") + """</p>
+<h2>Kumaoni food</h2>
+<ul>
+<li>Bhatt ki churkani (black soybean curry), aloo ke gutke, mandua (finger millet) roti, jhangora kheer and bhang ki chutney are classic Kumaoni dishes. """ + chk("(check which of these you serve or can arrange)") + """</li>
+<li>Meals at the house: """ + chk("your note on home-cooked meals and how guests can order them") + """</li>
+</ul>
+<h2>What to buy</h2>
+<ul>
+<li>Handmade copper utensils from Almora's traditional coppersmiths (the Tamta community) """ + chk("(check)") + """</li>
+<li>Woollens, shawls and Kumaoni caps</li>
+<li>Aipan art, a traditional Kumaoni folk art done in red and white</li>
+<li>Local pulses, spices and honey """ + chk("(check what is good to carry back)") + """</li>
+</ul>
+<h2>Where</h2>
+<p>The main market is also where the <a href="../things-to-do-in-almora/">Nanda Devi Temple</a> stands, so you can cover both in one walk. """ + chk("your tip: best time of day and shops closed on which day") + """</p>"""))
+
+PAGES.append(dict(
+    slug="almora-trip-packing-and-tips",
+    title="Almora trip tips: what to pack and what to expect",
+    desc="Practical tips for a family weekend in Almora: what to pack, the road, the walk to the homestay, network and weather.",
+    h1="Almora trip tips: what to pack and what to expect",
+    lead="A few practical things we tell every guest before they arrive, so the stay is easy.",
+    body=lambda: """
+<h2>What to pack</h2>
+<ul>
+<li>Layers: even in summer the evenings are cool. Warm jackets from October to March.</li>
+<li>Comfortable shoes with grip for the walk to the house and for temple steps.</li>
+<li>A torch for evening walks; paths are not lit.</li>
+<li>Motion-sickness tablets if anyone gets queasy on hill roads. The last stretch from Kathgodam is winding.</li>
+<li>Cash for small shops. Most places take UPI, but network can be patchy.</li>
+</ul>
+<h2>Arriving at the house</h2>
+<ul>
+<li>Park on the street, then walk about 300 metres to the house """ + chk("(downhill on the way in?)") + """.</li>
+<li>Tell us when you are an hour away and we will guide you.</li>
+<li>""" + chk("your note: help with luggage for elderly guests or children") + """</li>
+</ul>
+<h2>Good to know</h2>
+<ul>
+<li>Wi-Fi is available at the house """ + chk("(check speed and mobile network)") + """.</li>
+<li>Hill roads can be slow after rain; keep a buffer on travel day.</li>
+<li>Plan your route with <a href="../how-to-reach-almora/">how to reach Almora</a>.</li>
+</ul>"""))
+
+
 def render(p):
     robots = '<meta name="robots" content="noindex, nofollow">' if DRAFT else ""
     canon = "" if DRAFT else f'<link rel="canonical" href="{DOMAIN}/{p["slug"]}/">'
