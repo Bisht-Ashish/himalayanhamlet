@@ -158,8 +158,5 @@ export const FAQ = [
   { q: 'Is it safe, especially in winter?', a: "The family lives on the ground floor, so someone is always close by. Please use the room heaters and the chulha with care, and keep the room ventilated while they run. The house does not have smoke or carbon monoxide alarms, so we are happy to show you how to use everything safely when you arrive." },
 ];
 
-export const FOOTER_LINKS = [
-  { href: '#', label: 'Privacy policy' },
-  { href: '#', label: 'Cancellation & refund policy' },
-  { href: '#', label: 'Terms' },
-];
+// Add policy pages here when you have them, e.g. { href: 'privacy.html', label: 'Privacy policy' }
+export const FOOTER_LINKS: { href: string; label: string }[] = [];

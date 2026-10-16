@@ -20,11 +20,13 @@ import { FOOTER_LINKS, SITE } from './site-data';
       }
       <a [href]="site.instagramUrl" target="_blank" rel="noopener">Instagram {{ site.instagramHandle }}</a>
     </div>
-    <div>
-      @for (l of links; track l.label) {
-        <a [href]="l.href">{{ l.label }}</a>
-      }
-    </div>
+    @if (links.length) {
+      <div>
+        @for (l of links; track l.label) {
+          <a [href]="l.href">{{ l.label }}</a>
+        }
+      </div>
+    }
   </div>
 </footer>`,
 })
