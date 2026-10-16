@@ -168,25 +168,32 @@ PAGES.append(dict(
 
 
 PAGES.append(dict(
-    slug="guest-stories-staying-with-a-family-in-almora",
-    title="Staying with a family in Almora: what our guests remember",
-    desc="Guests tell what a stay at Himalayan Hamlet is really like: the Himalayan sunrise, the food, and a family that treats you like one of its own.",
-    h1="What guests remember about staying with a family in Almora",
-    lead="We can describe the house, but guests describe it better. These are their words from Airbnb, in the order the stay tends to unfold.",
+    slug="our-family-home-in-almora",
+    title="Our family home in Almora: the story of Himalayan Hamlet",
+    desc="Himalayan Hamlet is a family home in Almora built by a grandfather, run by parents Arjun and Saraswati, and opened to guests since Covid. Early light on Nanda Devi, home-cooked food and a family that treats guests like family.",
+    h1="Our family home in Almora",
+    lead="Himalayan Hamlet is not a hotel. It is my parents' house, where my brother and I grew up, and where guests now stay as part of the family.",
     body=lambda: """
-<h2>The morning that stays with you</h2>
-<blockquote class="story">&ldquo;One of the most memorable parts of our stay was the breathtaking sunrise and the stunning panoramic view of the entire Himalayan range from the balcony. Waking up to such a magical view every morning was an unforgettable experience.&rdquo;<cite>Sarada</cite></blockquote>
-<p>""" + chk("your words: what the morning looks like from the balcony, and which peaks are visible") + """</p>
-<h2>The food and the chats</h2>
-<blockquote class="story">&ldquo;The food aunty makes and the chats, snacks we had with the family was the star of our trip, we stayed for a week there and it felt like a family vacation.&rdquo;<cite>Piyush</cite></blockquote>
-<p>""" + chk("your words: a dish or tea moment guests love, and who cooks") + """</p>
-<h2>Arriving as a stranger, leaving as a guest</h2>
-<blockquote class="story">&ldquo;Each member played their part in making me feel safe and very welcome, which means a lot as a solo traveler in India for the first time.&rdquo;<cite>Dora</cite></blockquote>
-<blockquote class="story">&ldquo;The entire family is extremely warm and it honestly felt like we are visiting a family; that&rsquo;s how much they take care of you.&rdquo;<cite>Astha</cite></blockquote>
-<h2>A quiet place to work</h2>
-<blockquote class="story">&ldquo;Serenely quiet, private, WFH ready &hellip; and well appointed so that you can just show up with the clothes on your back.&rdquo;<cite>Aman</cite></blockquote>
-<h2>Plan your own stay</h2>
-<p>Read the <a href="../#reviews">full reviews</a>, see <a href="../things-to-do-in-almora/">what to do around Almora</a>, or check dates on the <a href="../#book">calendar</a>.</p>"""))
+<h2>A house with a history</h2>
+<p>My grandfather built this house in Almora. Years later, my father, Arjun, added another floor, which is the floor guests stay on today. I grew up here. Then, like many people from the hills, we moved away for work and settled in Bangalore.</p>
+<p>My parents, Arjun and Saraswati, stayed. During the Covid pandemic, when the house had few visitors, we began hosting guests as a homestay. We still visit for holidays and workations, so we know the house the way a guest does too. """ + chk("(add your sibling or family details if you like, or remove 'my brother and I')") + """</p>
+<h2>Mornings face east</h2>
+<p>The house faces east, so the first sun reaches it early. In the morning light you can see Nanda Devi, Nandakot, Chaukhamba, Trishul and other peaks glowing, and you can hear the birds before you see them. With luck you will spot the local wild hens wandering around. The morning is always pleasant.</p>
+<blockquote class="story">&ldquo;One of the most memorable parts of our stay was the breathtaking sunrise and the stunning panoramic view of the entire Himalayan range from the balcony. Waking up to such a magical view every morning was an unforgettable experience.&rdquo;<cite>Sarada, guest</cite></blockquote>
+<p>My favourite hour is the slow morning. I get up, walk through the garden among the green, look at the peaks, listen to the birds, and say a small hello to familiar faces on their way to work. In the city, mornings start with a rush to beat the traffic. Here, they start slowly, and it is the thing I miss most when I am away.</p>
+<h2>The food, and the chats around it</h2>
+<p>Guests eat home-cooked Indian food made in our kitchen. There are local juices, homemade chutneys and achaar, and fruits and vegetables grown at home. Tea and coffee are shared, usually with a long chat.</p>
+<blockquote class="story">&ldquo;The food aunty makes and the chats, snacks we had with the family was the star of our trip, we stayed for a week there and it felt like a family vacation.&rdquo;<cite>Piyush, guest</cite></blockquote>
+<p>Many guests leave asking for recipes. They ask where to find the spices, they ask for plant cuttings and tiny flower pots, and a few have even asked for advice on buying a piece of land. We are happy to oblige, apart from the land, which we leave to you to think over.</p>
+<h2>Parents who go the extra mile</h2>
+<p>My parents treat guests the way they would treat relatives. They help with luggage, join guests on short treks nearby, fetch groceries or milk, and explain the area: the plants, the mountains and the local culture. Guests are welcome to walk to the farm, pick vegetables and fruit, and plant flowers. A few people around the house help keep things clean and carry bags.</p>
+<blockquote class="story">&ldquo;The entire family is extremely warm and it honestly felt like we are visiting a family; that&rsquo;s how much they take care of you.&rdquo;<cite>Astha, guest</cite></blockquote>
+<h2>Solo travellers, long stays and return guests</h2>
+<p>Guests often extend their stay. Some have stayed more than a month, exploring Almora and working from the house. We have hosted solo travellers too, who enjoyed time with my parents and the family, and also their own quiet time.</p>
+<blockquote class="story">&ldquo;Each member played their part in making me feel safe and very welcome, which means a lot as a solo traveler in India for the first time.&rdquo;<cite>Dora, guest</cite></blockquote>
+<p>Some guests now come back again and again, and they feel like family to us.</p>
+<h2>Come and stay</h2>
+<p>Check dates on the <a href="../#book">availability calendar</a>, read <a href="../things-to-do-in-almora/">what to do around Almora</a>, or message us on WhatsApp below. Photos of the house are in the <a href="../#gallery">gallery</a>. """ + chk("(add 2 or 3 of your own photos here: balcony morning, a meal, the garden)") + """</p>"""))
 
 
 def render(p):
