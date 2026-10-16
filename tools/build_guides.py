@@ -192,6 +192,20 @@ PAGES.append(dict(
 <p>Guests often extend their stay. Some have stayed more than a month, exploring Almora and working from the house. We have hosted solo travellers too, who enjoyed time with my parents and the family, and also their own quiet time.</p>
 <blockquote class="story">&ldquo;Each member played their part in making me feel safe and very welcome, which means a lot as a solo traveler in India for the first time.&rdquo;<cite>Dora, guest</cite></blockquote>
 <p>Some guests now come back again and again, and they feel like family to us.</p>
+<h2>The small things guests mention</h2>
+<p>These are not things we advertise, but guests mention them again and again in their reviews.</p>
+<ul>
+<li><b>A welcome drink.</b> Guests are greeted with a glass of buransh (rhododendron) juice.</li>
+<li><b>Someone to meet you.</b> If you arrive late, Nitin comes to pick you up and help with the bags.</li>
+<li><b>A bonfire on cold evenings,</b> arranged by my father.</li>
+<li><b>Vegetables from the garden</b> for guests who want to cook in the kitchen.</li>
+<li><b>A scooty to borrow or rent</b> for a short tour of town.</li>
+<li><b>Company on a walk.</b> Family members have joined guests on the trek to Kasar Devi and other nearby hikes.</li>
+<li><b>Pets.</b> Guests often mention our dogs and our cat.</li>
+</ul>
+<blockquote class="story">&ldquo;Ashish and his family are always just a message away, yet they give you complete privacy throughout your stay. It&rsquo;s rare to find this perfect balance.&rdquo;<cite>Saurabh, guest</cite></blockquote>
+<blockquote class="story">&ldquo;We booked this place for 1 day but we extended our stay here for next day as well, because we felt like home only and the food prepared by aunt is so good.&rdquo;<cite>Swati, guest</cite></blockquote>
+<blockquote class="story">&ldquo;They were always there to help us, from renting a scooty, to food, to giving us right directions.&rdquo;<cite>Sanjivani, guest</cite></blockquote>
 <h2>Come and stay</h2>
 <p>Check dates on the <a href="../#book">availability calendar</a>, read <a href="../things-to-do-in-almora/">what to do around Almora</a>, or message us on WhatsApp below. Photos of the house are in the <a href="../#gallery">gallery</a>. """ + chk("(add 2 or 3 of your own photos here: balcony morning, a meal, the garden)") + """</p>"""))
 
