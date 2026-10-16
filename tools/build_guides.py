@@ -74,6 +74,7 @@ PAGES.append(dict(
 <figure class="shot"><img src="../images/himalayan-range-morning.webp" alt="Snow-covered Himalayan peaks glowing in early morning light under a clear blue sky, seen from Almora" width="1280" height="960" loading="lazy"></figure>
 <blockquote class="story">&ldquo;One of the most memorable parts of our stay was the breathtaking sunrise and the stunning panoramic view of the entire Himalayan range from the balcony. Waking up to such a magical view every morning was an unforgettable experience.&rdquo;<cite>Sarada, guest</cite></blockquote>
 <p>My favourite hour is the slow morning. I get up, walk through the garden among the green, look at the peaks, listen to the birds, and say a small hello to familiar faces on their way to work. In the city, mornings start with a rush to beat the traffic. Here, they start slowly, and it is the thing I miss most when I am away.</p>
+<figure class="shot"><img src="../images/himalayan-panorama.webp" alt="Panorama of snow-covered Himalayan peaks above pine-covered hills near Almora under a clear blue sky" width="1280" height="576" loading="lazy"></figure>
 <h2>The food, and the chats around it</h2>
 <p>Guests eat home-cooked Indian food made in our kitchen. There are local juices, homemade chutneys and achaar, and fruits and vegetables grown at home. Tea and coffee are shared, usually with a long chat.</p>
 <blockquote class="story">&ldquo;The food aunty makes and the chats, snacks we had with the family was the star of our trip, we stayed for a week there and it felt like a family vacation.&rdquo;<cite>Piyush, guest</cite></blockquote>
@@ -124,7 +125,7 @@ def render(p):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="../guide-assets/styles.css">
-<link rel="stylesheet" href="../guide-assets/guide.css?v=notes2">
+<link rel="stylesheet" href="../guide-assets/guide.css?v=notes3">
 </head>
 <body>
 <header class="site-header solid"><div class="wrap hd">
