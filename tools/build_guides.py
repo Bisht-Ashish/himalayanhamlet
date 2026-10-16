@@ -172,11 +172,11 @@ PAGES.append(dict(
     title="Our family home in Almora: the story of Himalayan Hamlet",
     desc="Himalayan Hamlet is a family home in Almora built by a grandfather, run by parents Arjun and Saraswati, and opened to guests since Covid. Early light on Nanda Devi, home-cooked food and a family that treats guests like family.",
     h1="Our family home in Almora",
-    lead="Himalayan Hamlet is not a hotel. It is my parents' house, where my brother and I grew up, and where guests now stay as part of the family.",
+    lead="Himalayan Hamlet is not a hotel. It is my parents' house, where my brother Nitin and I grew up, and where guests now stay as part of the family.",
     body=lambda: """
 <h2>A house with a history</h2>
-<p>My grandfather built this house in Almora. Years later, my father, Arjun, added another floor, which is the floor guests stay on today. I grew up here. Then, like many people from the hills, we moved away for work and settled in Bangalore.</p>
-<p>My parents, Arjun and Saraswati, stayed. During the Covid pandemic, when the house had few visitors, we began hosting guests as a homestay. We still visit for holidays and workations, so we know the house the way a guest does too. """ + chk("(add your sibling or family details if you like, or remove 'my brother and I')") + """</p>
+<p>My grandfather built this house in Almora. Years later, my father, Arjun, added another floor, which is the floor guests stay on today. My brother Nitin and I grew up here. Then, like many people from the hills, we moved away for work and settled in Bangalore.</p>
+<p>My parents, Arjun and Saraswati, stayed. During the Covid pandemic, when the house had few visitors, we began hosting guests as a homestay. We still visit for holidays and workations, so we know the house the way a guest does too. </p>
 <h2>Mornings face east</h2>
 <p>The house faces east, so the first sun reaches it early. In the morning light you can see Nanda Devi, Nandakot, Chaukhamba, Trishul and other peaks glowing, and you can hear the birds before you see them. With luck you will spot the local wild hens wandering around. The morning is always pleasant.</p>
 <blockquote class="story">&ldquo;One of the most memorable parts of our stay was the breathtaking sunrise and the stunning panoramic view of the entire Himalayan range from the balcony. Waking up to such a magical view every morning was an unforgettable experience.&rdquo;<cite>Sarada, guest</cite></blockquote>
