@@ -63,7 +63,7 @@ PAGES.append(dict(
     title="Our family home in Almora: the story of Himalayan Hamlet",
     desc="Himalayan Hamlet is a family home in Almora built by a grandfather, run by parents Arjun and Saraswati, and opened to guests since Covid. Early light on Nanda Devi, home-cooked food and a family that treats guests like family.",
     h1="Our family home in Almora",
-    lead="Himalayan Hamlet is not a hotel. It is my parents' house, where my brother Nitin, my sister Manisha and I grew up, and where guests now stay as part of the family.",
+    lead="Himalayan Hamlet is the house where my brother Nitin, my sister Manisha and I grew up. Today my parents welcome guests into it as part of the family.",
     body=lambda: """
 <h2>A house with a history</h2>
 <p>My grandfather built this house in Almora. Years later, my father, Arjun, added another floor, which is the floor guests stay on today. My brother Nitin, my sister Manisha and I grew up here. Then, like many people from the hills, we moved away for work and settled in Bangalore, where my wife Akansha and I live now. She has met a few of our guests on her visits too.</p>
