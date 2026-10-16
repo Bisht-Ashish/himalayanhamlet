@@ -14,14 +14,14 @@ import { Reviews } from './reviews';
 import { Rooms } from './rooms';
 import { Seasons } from './seasons';
 import { Stay } from './stay';
-import { StickyBar } from './sticky-bar';
+import { WaFloat } from './wa-float';
 import { WeatherSection } from './weather-section';
 
 @Component({
   selector: 'app-root',
   imports: [
     Header, Hero, Facts, Stay, Rooms, Amenities, Seasons, Gallery, Around, Hosts,
-    WeatherSection, Reviews, Faq, Booking, SiteFooter, StickyBar, IgFloat,
+    WeatherSection, Reviews, Faq, Booking, SiteFooter, WaFloat, IgFloat,
   ],
   template: `
 <app-header />
@@ -41,7 +41,7 @@ import { WeatherSection } from './weather-section';
   <app-booking />
 </main>
 <app-footer />
-<app-sticky-bar />
+<app-wa-float />
 <app-ig-float />`,
 })
 export class App {}

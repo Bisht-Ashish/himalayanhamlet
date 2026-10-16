@@ -136,7 +136,8 @@ for (const [name, viewport] of [
       !(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)),
       name + ': no sideways scrolling',
     );
-    check(await page.locator('.sticky').isVisible(), name + ': sticky contact bar is visible');
+    check(await page.locator('.wa-float').isVisible(), name + ': floating WhatsApp button is visible');
+    check((await page.locator('.sticky').count()) === 0, name + ': no sticky bar any more');
   }
 
   // Floating Instagram button
