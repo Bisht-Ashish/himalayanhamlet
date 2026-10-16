@@ -151,6 +151,7 @@ export const REVIEWS = [
 
 export const FAQ = [
   { q: 'How far is the parking from the house?', a: 'It is about a 300 metre walk from the parking, along a path that slopes downhill to the house (and uphill when you leave). Tell us in advance if you travel with elders or heavy luggage.' },
+  { q: 'Can you help with a taxi or planning our days?', a: 'Yes. My parents can help arrange a taxi from Kathgodam or Haldwani, and for day trips around Almora. They are also happy to suggest places to visit. Message us your arrival time and we will help.' },
   { q: 'Can my driver stay?', a: 'There is no driver accommodation at the homestay. We can help you find a budget place nearby.' },
   { q: 'Are meals available?', a: 'Breakfast, lunch and dinner can be prepared at extra cost. You can also cook in the kitchen.' },
   { q: 'How do I book and pay?', a: 'Send your dates on WhatsApp. We confirm availability and share the payment details with you.' },

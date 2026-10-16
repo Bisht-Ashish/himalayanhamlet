@@ -144,10 +144,10 @@ for (const [name, viewport] of [
   check(!!ig && ig.includes('instagram.com/himalayan_hamlet'), `${name}: floating Instagram button links to the profile`);
 
   // Static guide pages (hidden drafts for now)
-  for (const slug of ['things-to-do-in-almora', 'how-to-reach-almora']) {
+  for (const slug of ['things-to-do-in-almora', 'our-family-home-in-almora']) {
     await page.goto(`http://localhost:4300/${slug}/`);
     await page.waitForSelector('h1');
-    check((await page.locator('.gtable tr').count()) >= 4, `${name}: ${slug} shows its table`);
+    check((await page.locator('.guide h1').count()) === 1, `${name}: ${slug} shows its heading`);
     check(
       !(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)),
       `${name}: ${slug} has no sideways scrolling`,
