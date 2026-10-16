@@ -134,7 +134,6 @@ def render(p):
 <h1>{html.escape(p["h1"])}</h1>
 <p class="lead">{p["lead"]}</p>
 {p["body"]()}
-<p class="cta"><a class="btn" href="{WA}" target="_blank" rel="noopener">Ask us about your dates on WhatsApp</a></p>
 </div></main>
 <footer class="foot"><div class="wrap foot-grid">
 <div><a class="brand" href="../"><span class="brand-ic">{ICON_LOGO}</span>Himalayan Hamlet</a><p>Almora, Uttarakhand</p></div>
