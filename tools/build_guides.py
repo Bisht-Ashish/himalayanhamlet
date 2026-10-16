@@ -184,6 +184,7 @@ PAGES.append(dict(
 <h2>The food, and the chats around it</h2>
 <p>Guests eat home-cooked Indian food made in our kitchen. There are local juices, homemade chutneys and achaar, and fruits and vegetables grown at home. Tea and coffee are shared, usually with a long chat.</p>
 <blockquote class="story">&ldquo;The food aunty makes and the chats, snacks we had with the family was the star of our trip, we stayed for a week there and it felt like a family vacation.&rdquo;<cite>Piyush, guest</cite></blockquote>
+<blockquote class="story">&ldquo;More than the food itself, it was her sweet little gestures, sending some sweets, extra condiments, or checking in with warmth that made every meal feel special. You genuinely begin to feel like you are not staying at a property, but with family.&rdquo;<cite>Sakshi, guest</cite></blockquote>
 <p>Many guests leave asking for recipes. They ask where to find the spices, they ask for plant cuttings and tiny flower pots, and a few have even asked for advice on buying a piece of land. We are happy to oblige, apart from the land, which we leave to you to think over.</p>
 <h2>Parents who go the extra mile</h2>
 <p>My parents treat guests the way they would treat relatives. They help with luggage, join guests on short treks nearby, fetch groceries or milk, and explain the area: the plants, the mountains and the local culture. They also help guests plan their travel around Almora, arrange taxis, and pick up local sweets and spices to take home. Guests are welcome to walk to the farm, pick vegetables and fruit, and plant flowers. A few people around the house help keep things clean and carry bags.</p>
@@ -201,11 +202,12 @@ PAGES.append(dict(
 <li><b>Vegetables from the garden</b> for guests who want to cook in the kitchen.</li>
 <li><b>A scooty to borrow or rent</b> for a short tour of town.</li>
 <li><b>Company on a walk.</b> Family members have joined guests on the trek to Kasar Devi and other nearby hikes.</li>
-<li><b>Pets.</b> Guests often mention our dogs and our cat.</li>
+<li><b>Pets.</b> Guests often mention Lucy, our dog, and our cat. """ + chk("(confirm names and whether Lucy is still with you)") + """</li>
 </ul>
 <blockquote class="story">&ldquo;Ashish and his family are always just a message away, yet they give you complete privacy throughout your stay. It&rsquo;s rare to find this perfect balance.&rdquo;<cite>Saurabh, guest</cite></blockquote>
 <blockquote class="story">&ldquo;We booked this place for 1 day but we extended our stay here for next day as well, because we felt like home only and the food prepared by aunt is so good.&rdquo;<cite>Swati, guest</cite></blockquote>
 <blockquote class="story">&ldquo;They were always there to help us, from renting a scooty, to food, to giving us right directions.&rdquo;<cite>Sanjivani, guest</cite></blockquote>
+<blockquote class="story">&ldquo;For anyone wondering about work-from-home facilities, they have good network connectivity and reliable high-speed Wi-Fi. I was able to complete my office work seamlessly and attend Zoom calls without any glitches.&rdquo;<cite>Sakshi, guest</cite></blockquote>
 <h2>Come and stay</h2>
 <p>Check dates on the <a href="../#book">availability calendar</a>, read <a href="../things-to-do-in-almora/">what to do around Almora</a>, or message us on WhatsApp below. Photos of the house are in the <a href="../#gallery">gallery</a>. """ + chk("(add 2 or 3 of your own photos here: balcony morning, a meal, the garden)") + """</p>"""))
 
