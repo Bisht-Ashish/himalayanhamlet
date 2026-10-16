@@ -167,6 +167,28 @@ PAGES.append(dict(
 </ul>"""))
 
 
+PAGES.append(dict(
+    slug="guest-stories-staying-with-a-family-in-almora",
+    title="Staying with a family in Almora: what our guests remember",
+    desc="Guests tell what a stay at Himalayan Hamlet is really like: the Himalayan sunrise, the food, and a family that treats you like one of its own.",
+    h1="What guests remember about staying with a family in Almora",
+    lead="We can describe the house, but guests describe it better. These are their words from Airbnb, in the order the stay tends to unfold.",
+    body=lambda: """
+<h2>The morning that stays with you</h2>
+<blockquote class="story">&ldquo;One of the most memorable parts of our stay was the breathtaking sunrise and the stunning panoramic view of the entire Himalayan range from the balcony. Waking up to such a magical view every morning was an unforgettable experience.&rdquo;<cite>Sarada</cite></blockquote>
+<p>""" + chk("your words: what the morning looks like from the balcony, and which peaks are visible") + """</p>
+<h2>The food and the chats</h2>
+<blockquote class="story">&ldquo;The food aunty makes and the chats, snacks we had with the family was the star of our trip, we stayed for a week there and it felt like a family vacation.&rdquo;<cite>Piyush</cite></blockquote>
+<p>""" + chk("your words: a dish or tea moment guests love, and who cooks") + """</p>
+<h2>Arriving as a stranger, leaving as a guest</h2>
+<blockquote class="story">&ldquo;Each member played their part in making me feel safe and very welcome, which means a lot as a solo traveler in India for the first time.&rdquo;<cite>Dora</cite></blockquote>
+<blockquote class="story">&ldquo;The entire family is extremely warm and it honestly felt like we are visiting a family; that&rsquo;s how much they take care of you.&rdquo;<cite>Astha</cite></blockquote>
+<h2>A quiet place to work</h2>
+<blockquote class="story">&ldquo;Serenely quiet, private, WFH ready &hellip; and well appointed so that you can just show up with the clothes on your back.&rdquo;<cite>Aman</cite></blockquote>
+<h2>Plan your own stay</h2>
+<p>Read the <a href="../#reviews">full reviews</a>, see <a href="../things-to-do-in-almora/">what to do around Almora</a>, or check dates on the <a href="../#book">calendar</a>.</p>"""))
+
+
 def render(p):
     robots = '<meta name="robots" content="noindex, nofollow">' if DRAFT else ""
     canon = "" if DRAFT else f'<link rel="canonical" href="{DOMAIN}/{p["slug"]}/">'
