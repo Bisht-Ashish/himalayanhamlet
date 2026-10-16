@@ -71,6 +71,7 @@ PAGES.append(dict(
 <p>My parents, Arjun and Saraswati, stayed. During the Covid pandemic, when the house had few visitors, we began hosting guests as a homestay. We still visit for holidays and workations, so we know the house the way a guest does too. </p>
 <h2>Mornings face east</h2>
 <p>The house faces east, so the first sun reaches it early. In the morning light you can see Nanda Devi, Nandakot, Chaukhamba, Trishul and other peaks glowing, and you can hear the birds before you see them. With luck you will spot the local wild hens wandering around. The morning is always pleasant.</p>
+<figure class="shot"><img src="../images/himalayan-range-morning.webp" alt="Snow-covered Himalayan peaks glowing in early morning light under a clear blue sky, seen from Almora" width="1280" height="960" loading="lazy"></figure>
 <blockquote class="story">&ldquo;One of the most memorable parts of our stay was the breathtaking sunrise and the stunning panoramic view of the entire Himalayan range from the balcony. Waking up to such a magical view every morning was an unforgettable experience.&rdquo;<cite>Sarada, guest</cite></blockquote>
 <p>My favourite hour is the slow morning. I get up, walk through the garden among the green, look at the peaks, listen to the birds, and say a small hello to familiar faces on their way to work. In the city, mornings start with a rush to beat the traffic. Here, they start slowly, and it is the thing I miss most when I am away.</p>
 <h2>The food, and the chats around it</h2>
@@ -123,7 +124,7 @@ def render(p):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="../guide-assets/styles.css">
-<link rel="stylesheet" href="../guide-assets/guide.css?v=notes1">
+<link rel="stylesheet" href="../guide-assets/guide.css?v=notes2">
 </head>
 <body>
 <header class="site-header solid"><div class="wrap hd">
