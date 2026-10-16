@@ -20,6 +20,7 @@ import { STAY } from './site-data';
           <li>{{ h.label }}<span>{{ h.value }}</span></li>
         }
       </ul>
+      <p><a class="more" href="our-family-home-in-almora/">Read the story of our family home &rarr;</a></p>
     </div>
   </div>
 </section>`,
