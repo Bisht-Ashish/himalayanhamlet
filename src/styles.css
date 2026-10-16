@@ -185,8 +185,6 @@ details p{color:var(--mute);margin:0 0 20px;max-width:46em}
 .foot a{display:block;text-decoration:none;margin-bottom:6px}
 .foot a.brand{display:flex}
 .foot a:hover{color:var(--ink)}
-.sticky{display:none;position:fixed;inset:auto 0 0 0;z-index:25;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
-.sticky .btn{flex:1;min-height:48px;padding:0 10px}
 
 @media(max-width:900px){
   .hd nav{display:none}
@@ -200,8 +198,7 @@ details p{color:var(--mute);margin:0 0 20px;max-width:46em}
   .split,.book-grid,.foot-grid,.book-grid.solo{grid-template-columns:minmax(0,1fr)}
   .split>*,.book-grid>*{min-width:0}
   .photo{aspect-ratio:4/3}
-  .sticky{display:flex}
-  .foot{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
+  .foot{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
 }
 @media(max-width:700px){
   .rooms,.seasons,.rev,.subr{grid-template-columns:minmax(0,1fr)}
@@ -239,6 +236,9 @@ details p{color:var(--mute);margin:0 0 20px;max-width:46em}
 .ig-float{position:fixed;right:16px;bottom:20px;z-index:26;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(45deg,#f9a03c,#e1306c 55%,#7e3bd0);box-shadow:0 10px 24px -8px rgba(0,0,0,.45);transition:transform .2s}
 .ig-float:hover{transform:scale(1.08)}
 .ig-float app-icon,.ig-float svg{width:26px;height:26px}
-@media(max-width:900px){.ig-float{bottom:calc(78px + env(safe-area-inset-bottom,0px));right:14px;width:48px;height:48px}}
+.wa-float{position:fixed;right:16px;bottom:84px;z-index:26;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;background:#1fa855;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float app-icon,.wa-float svg{width:28px;height:28px}
+@media(max-width:900px){.ig-float{bottom:calc(16px + env(safe-area-inset-bottom,0px));right:14px;width:48px;height:48px}.wa-float{bottom:calc(76px + env(safe-area-inset-bottom,0px));right:14px;width:48px;height:48px}}
 .more{font-weight:700;color:var(--teal);text-decoration:none}.more:hover{text-decoration:underline}
 .rev-links{display:flex;flex-wrap:wrap;gap:8px 28px;margin:0}
