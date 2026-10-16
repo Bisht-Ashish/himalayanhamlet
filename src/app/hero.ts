@@ -17,8 +17,8 @@ import { HERO } from './site-data';
       }
     </div>
     <form class="bar" (submit)="$event.preventDefault()">
-      <label>Check-in<input type="date" [value]="q.checkIn()" (input)="q.checkIn.set($any($event.target).value)"></label>
-      <label>Check-out<input type="date" [value]="q.checkOut()" (input)="q.checkOut.set($any($event.target).value)"></label>
+      <label>Check-in<input type="date" data-ph="Select date" [class.empty]="!q.checkIn()" [value]="q.checkIn()" (input)="q.checkIn.set($any($event.target).value)"></label>
+      <label>Check-out<input type="date" data-ph="Select date" [class.empty]="!q.checkOut()" [value]="q.checkOut()" (input)="q.checkOut.set($any($event.target).value)"></label>
       <label>Guests
         <select (change)="q.guests.set($any($event.target).value)">
           @for (n of guestOptions; track n) {
