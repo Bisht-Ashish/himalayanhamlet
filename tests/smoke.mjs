@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'content-type': 'application/json' });
     return res.end(JSON.stringify(booked));
   }
-  if (p === '/') p = '/index.html';
+  if (p.endsWith('/')) p += 'index.html';
   const f = path.join(root, p);
   if (!f.startsWith(root) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) {
     res.writeHead(404);
@@ -138,6 +138,24 @@ for (const [name, viewport] of [
     );
     check(await page.locator('.sticky').isVisible(), name + ': sticky contact bar is visible');
   }
+
+  // Floating Instagram button
+  const ig = await page.getAttribute('.ig-float', 'href');
+  check(!!ig && ig.includes('instagram.com/himalayan_hamlet'), `${name}: floating Instagram button links to the profile`);
+
+  // Static guide pages (hidden drafts for now)
+  for (const slug of ['things-to-do-in-almora', 'how-to-reach-almora']) {
+    await page.goto(`http://localhost:4300/${slug}/`);
+    await page.waitForSelector('h1');
+    check((await page.locator('.gtable tr').count()) >= 4, `${name}: ${slug} shows its table`);
+    check(
+      !(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)),
+      `${name}: ${slug} has no sideways scrolling`,
+    );
+    check((await page.locator('.ig-float').count()) === 1, `${name}: ${slug} has the Instagram button`);
+  }
+  await page.goto('http://localhost:4300/index.html');
+  await page.waitForSelector('h1');
 
   await page.screenshot({ path: `smoke-out/${name}-top.png` });
   await page.screenshot({ path: `smoke-out/${name}-full.png`, fullPage: true });
