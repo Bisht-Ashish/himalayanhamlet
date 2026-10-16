@@ -201,7 +201,7 @@ PAGES.append(dict(
 <li><b>Vegetables from the garden</b> for guests who want to cook in the kitchen.</li>
 <li><b>A scooty to borrow or rent</b> for a short tour of town.</li>
 <li><b>Company on a walk.</b> Family members have joined guests on the trek to Kasar Devi and other nearby hikes.</li>
-<li><b>Pets.</b> Guests often mention Lucy, our dog, and our cat. """ + chk("(confirm names and whether Lucy is still with you)") + """</li>
+<li><b>Pets.</b> Guests often mention Lucy, our much-loved dog, and our cat.</li>
 </ul>
 <blockquote class="story">&ldquo;Ashish and his family are always just a message away, yet they give you complete privacy throughout your stay. It&rsquo;s rare to find this perfect balance.&rdquo;<cite>Saurabh, guest</cite></blockquote>
 <blockquote class="story">&ldquo;We booked this place for 1 day but we extended our stay here for next day as well, because we felt like home only and the food prepared by aunt is so good.&rdquo;<cite>Swati, guest</cite></blockquote>
