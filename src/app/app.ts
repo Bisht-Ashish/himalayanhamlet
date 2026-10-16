@@ -8,7 +8,7 @@ import { SiteFooter } from './footer';
 import { Gallery } from './gallery';
 import { Header } from './header';
 import { Hero } from './hero';
-import { InstagramBand } from './instagram';
+import { IgFloat } from './ig-float';
 import { Hosts } from './hosts';
 import { Reviews } from './reviews';
 import { Rooms } from './rooms';
@@ -20,8 +20,8 @@ import { WeatherSection } from './weather-section';
 @Component({
   selector: 'app-root',
   imports: [
-    Header, Hero, InstagramBand, Facts, Stay, Rooms, Amenities, Seasons, Gallery, Around, Hosts,
-    WeatherSection, Reviews, Faq, Booking, SiteFooter, StickyBar,
+    Header, Hero, Facts, Stay, Rooms, Amenities, Seasons, Gallery, Around, Hosts,
+    WeatherSection, Reviews, Faq, Booking, SiteFooter, StickyBar, IgFloat,
   ],
   template: `
 <app-header />
@@ -39,9 +39,9 @@ import { WeatherSection } from './weather-section';
   <app-reviews />
   <app-faq />
   <app-booking />
-  <app-instagram />
 </main>
 <app-footer />
-<app-sticky-bar />`,
+<app-sticky-bar />
+<app-ig-float />`,
 })
 export class App {}
