@@ -144,12 +144,9 @@ export const REACH =
 
 // Real guest reviews from the Airbnb listing (first name only). Add or swap quotes here.
 export const REVIEWS = [
-  { text: 'This stay is as colorful, idyllic, and peaceful as made evident by the photos and description. But what put it over the top was the warmth and generosity of the family. Each member played their part in making me feel safe and very welcome, which means a lot as a solo traveler in India for the first time.', by: 'Dora' },
-  { text: 'Ashish\'s place is fantastic. It\'s serenely quiet, private, WFH ready … and well appointed so that you can just show up with the clothes on your back.', by: 'Aman' },
-  { text: 'I wish I could give the stay and the family more than 5 star, one of the best AirBnB stay and the best family I have ever come across. The food aunty makes and the chats, snacks we had with the family was the star of our trip, we stayed for a week there and it felt like a family vacation.', by: 'Piyush' },
-  { text: 'One of the most memorable parts of our stay was the breathtaking sunrise and the stunning panoramic view of the entire Himalayan range from the balcony. Waking up to such a magical view every morning was an unforgettable experience.', by: 'Sarada' },
-  { text: 'The place has a marvelous view and the family is the perfect icing on the cake. … The entire family is extremely warm and it honestly felt like we are visiting a family; that\'s how much they take care of you.', by: 'Astha' },
   { text: 'Love the place!!! if you\'re ever in almora and this property is available, blindly go for it. The people are very hospitable and they treat you with utmost kindness and like one of them.', by: 'Tanisha' },
+  { text: 'Ashish\'s place is fantastic. It\'s serenely quiet, private, WFH ready … and well appointed so that you can just show up with the clothes on your back.', by: 'Aman' },
+  { text: 'The place has a marvelous view and the family is the perfect icing on the cake. … It honestly felt like we are visiting a family; that\'s how much they take care of you.', by: 'Astha' },
 ];
 
 export const FAQ = [
