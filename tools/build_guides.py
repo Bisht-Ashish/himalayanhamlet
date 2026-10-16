@@ -172,10 +172,10 @@ PAGES.append(dict(
     title="Our family home in Almora: the story of Himalayan Hamlet",
     desc="Himalayan Hamlet is a family home in Almora built by a grandfather, run by parents Arjun and Saraswati, and opened to guests since Covid. Early light on Nanda Devi, home-cooked food and a family that treats guests like family.",
     h1="Our family home in Almora",
-    lead="Himalayan Hamlet is not a hotel. It is my parents' house, where my brother Nitin and I grew up, and where guests now stay as part of the family.",
+    lead="Himalayan Hamlet is not a hotel. It is my parents' house, where my brother Nitin, my sister Manisha and I grew up, and where guests now stay as part of the family.",
     body=lambda: """
 <h2>A house with a history</h2>
-<p>My grandfather built this house in Almora. Years later, my father, Arjun, added another floor, which is the floor guests stay on today. My brother Nitin and I grew up here. Then, like many people from the hills, we moved away for work and settled in Bangalore.</p>
+<p>My grandfather built this house in Almora. Years later, my father, Arjun, added another floor, which is the floor guests stay on today. My brother Nitin, my sister Manisha and I grew up here. Then, like many people from the hills, we moved away for work and settled in Bangalore.</p>
 <p>My parents, Arjun and Saraswati, stayed. During the Covid pandemic, when the house had few visitors, we began hosting guests as a homestay. We still visit for holidays and workations, so we know the house the way a guest does too. </p>
 <h2>Mornings face east</h2>
 <p>The house faces east, so the first sun reaches it early. In the morning light you can see Nanda Devi, Nandakot, Chaukhamba, Trishul and other peaks glowing, and you can hear the birds before you see them. With luck you will spot the local wild hens wandering around. The morning is always pleasant.</p>
@@ -187,7 +187,7 @@ PAGES.append(dict(
 <blockquote class="story">&ldquo;More than the food itself, it was her sweet little gestures, sending some sweets, extra condiments, or checking in with warmth that made every meal feel special. You genuinely begin to feel like you are not staying at a property, but with family.&rdquo;<cite>Sakshi, guest</cite></blockquote>
 <p>Many guests leave asking for recipes. They ask where to find the spices, they ask for plant cuttings and tiny flower pots, and a few have even asked for advice on buying a piece of land. We are happy to oblige, apart from the land, which we leave to you to think over.</p>
 <h2>Parents who go the extra mile</h2>
-<p>My parents treat guests the way they would treat relatives. They help with luggage, join guests on short treks nearby, fetch groceries or milk, and explain the area: the plants, the mountains and the local culture. They also help guests plan their travel around Almora, arrange taxis, and pick up local sweets and spices to take home. Guests are welcome to walk to the farm, pick vegetables and fruit, and plant flowers. A few people around the house help keep things clean and carry bags.</p>
+<p>My parents treat guests the way they would treat relatives. They help with luggage, join guests on short treks nearby, fetch groceries or milk, and explain the area: the plants, the mountains and the local culture. They also help guests plan their travel around Almora, arrange taxis, and pick up local sweets and spices to take home. Guests are welcome to walk to the farm, pick vegetables and fruit, and plant flowers. A few people around the house help keep things clean and carry bags. Nitin picks up late arrivals and helps with bags. My sister Manisha takes care of guests too, from the way the rooms are decorated to walks and treks. """ + chk("(check Manisha's role in your own words, and add Akanksha if she is part of the family)") + """</p>
 <blockquote class="story">&ldquo;The entire family is extremely warm and it honestly felt like we are visiting a family; that&rsquo;s how much they take care of you.&rdquo;<cite>Astha, guest</cite></blockquote>
 <h2>Solo travellers, long stays and return guests</h2>
 <p>Guests often extend their stay. Some have stayed more than a month, exploring Almora and working from the house. We have hosted solo travellers too, who enjoyed time with my parents and the family, and also their own quiet time.</p>
