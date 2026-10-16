@@ -15,7 +15,10 @@ import { RATINGS, REVIEWS, SITE } from './site-data';
         <blockquote><p>“{{ r.text }}”</p><footer>{{ r.by }}</footer></blockquote>
       }
     </div>
-    <a class="link" [href]="airbnb" target="_blank" rel="noopener">Read all {{ count }} reviews on Airbnb</a>
+    <p class="rev-links">
+      <a class="link" href="our-family-home-in-almora/">Read what guests remember about the family</a>
+      <a class="link" [href]="airbnb" target="_blank" rel="noopener">Read all {{ count }} reviews on Airbnb</a>
+    </p>
   </div>
 </section>`,
 })
