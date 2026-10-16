@@ -29,16 +29,17 @@ PAGES = []
 PAGES.append(dict(
     slug="things-to-do-in-almora",
     title="Things to do in Almora: temples, treks and day trips from a local host",
-    desc="Kasar Devi, Nanda Devi Temple, Chitai, Binsar, Katarmal Sun Temple and Jageshwar: distances and tips from Himalayan Hamlet, a family homestay in Almora.",
+    desc="Kasar Devi, Nanda Devi Temple, Chitai, Binsar, Katarmal Sun Temple, Jageshwar and Kainchi Dham: distances and tips from Himalayan Hamlet, a family homestay in Almora.",
     h1="Things to do in Almora",
     lead="Almora is a base for slow days: temples on the ridges, forest walks, and day trips to Binsar and Jageshwar. We live here, so these are the places we send our own guests, with distances from Himalayan Hamlet.",
     body=lambda: table(["Place", "From the homestay", "Why go"], [
-        ["Kasar Devi Temple", "3 km", "Hilltop temple on a ridge with valley and Himalayan views; a calm spot for sunrise or quiet time."],
-        ["Nanda Devi Temple", "4 km", "The main temple of Kumaon's goddess, in the old part of Almora. Its annual fair is held in September " + chk("(check the dates each year)") + "."],
+        ["Kasar Devi Temple", "3 km", "A hilltop temple known for meditation, for its Van Allen belt magnetic anomaly, and for the well-known people who meditated here " + chk("(add the names you want to mention, e.g. Swami Vivekananda)") + ". Valley and Himalayan views, and a calm spot at sunrise."],
+        ["Nanda Devi Temple", "4 km", "The main temple of Kumaon's goddess, in the heart of Almora's main market. Visit it while you explore the local bazaar, its sweets and shops."],
         ["Chitai Golu Devta Temple", "6 km", "Shrine of the local deity Golu Devta, known for the thousands of bells left by devotees."],
         ["Binsar Wildlife Sanctuary", "12 km", "Oak and rhododendron forest, birdwatching and a wide Himalayan viewpoint; a good full-day trip."],
         ["Katarmal Sun Temple", "20 km", "A 9th-century sun temple with finely carved stone panels, worth the drive and the quiet."],
         ["Jageshwar Dham", "33 km", "A cluster of more than 100 old stone temples set in deodar forest."],
+        ["Kainchi Dham", "about 40 km " + chk("(check)"), "The ashram of Neem Karoli Baba on the Nainital road, now very popular with visitors from India and abroad. It gets crowded at weekends and during its annual fair in June " + chk("(check)") + "."],
     ]) + f"""
 <h2>A simple plan for three days</h2>
 <ol>
@@ -50,6 +51,7 @@ PAGES.append(dict(
 <ul>
 <li>Best time for clear mountain views: {chk("your months, October to March?")}</li>
 <li>Carry a torch for evening walks; the paths are not lit.</li>
+<li>Kainchi Dham is on the road between Kathgodam and Almora, so you can stop there on the way in or out {chk("(check)")}.</li>
 <li>We can arrange a taxi for the day trips. {chk("your arrangement and rough price?")}</li>
 </ul>"""))
 
@@ -70,6 +72,7 @@ PAGES.append(dict(
 <ol>
 <li>Take the evening train or bus to Kathgodam or Haldwani. Trains sell out in busy months, so book early.</li>
 <li>From the station, take a shared cab (reported at about ₹250 to ₹300 per person) or hire a private taxi to Almora. We can help arrange one {chk("(check price)")}.</li>
+<li>Kainchi Dham lies on the road from Kathgodam to Almora, so you can stop to visit on the way {chk("(check)")}.</li>
 <li>Tell us when you are an hour away, and we will guide you to the parking spot.</li>
 </ol>
 <h2>The last 300 metres</h2>
