@@ -212,8 +212,7 @@ PAGES.append(dict(
 <blockquote class="story">&ldquo;We booked this place for 1 day but we extended our stay here for next day as well, because we felt like home only and the food prepared by aunt is so good.&rdquo;<cite>Swati, guest</cite></blockquote>
 <blockquote class="story">&ldquo;They were always there to help us, from renting a scooty, to food, to giving us right directions.&rdquo;<cite>Sanjivani, guest</cite></blockquote>
 <blockquote class="story">&ldquo;For anyone wondering about work-from-home facilities, they have good network connectivity and reliable high-speed Wi-Fi. I was able to complete my office work seamlessly and attend Zoom calls without any glitches.&rdquo;<cite>Sakshi, guest</cite></blockquote>
-<h2>Come and stay</h2>
-<p>Check dates on the <a href="../#book">availability calendar</a>, or message us on WhatsApp below. Photos of the house are in the <a href="../#gallery">gallery</a>. """ + chk("(add 2 or 3 of your own photos here: balcony morning, a meal, the garden)") + """</p>"""))
+"""))
 
 
 def render(p):
