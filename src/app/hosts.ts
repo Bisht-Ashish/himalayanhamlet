@@ -12,6 +12,7 @@ import { HOSTS } from './site-data';
     <div>
       <h2>Meet your hosts</h2>
       <p>{{ hosts.text }}</p>
+      <p><a class="more" [href]="hosts.storyUrl">Read our family story &rarr;</a></p>
       @if (hosts.note) {
         <p class="note">{{ hosts.note }}</p>
       }

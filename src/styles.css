@@ -240,3 +240,4 @@ details p{color:var(--mute);margin:0 0 20px;max-width:46em}
 .ig-float:hover{transform:scale(1.08)}
 .ig-float app-icon,.ig-float svg{width:26px;height:26px}
 @media(max-width:900px){.ig-float{bottom:calc(78px + env(safe-area-inset-bottom,0px));right:14px;width:48px;height:48px}}
+.more{font-weight:700;color:var(--teal);text-decoration:none}.more:hover{text-decoration:underline}

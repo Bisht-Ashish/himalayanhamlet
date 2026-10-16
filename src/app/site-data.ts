@@ -30,6 +30,7 @@ export const NAV = [
   { href: '#gallery', label: 'Gallery' },
   { href: '#around', label: 'Around Almora' },
   { href: '#faq', label: 'FAQ' },
+  { href: 'our-family-home-in-almora/', label: 'Our story' },
 ];
 
 export const HERO = {
@@ -127,7 +128,8 @@ export const RATINGS = {
 };
 
 export const HOSTS = {
-  text: 'Ashish is a software engineer who has lived in Almora for over 20 years. He runs Himalayan Hamlet with his parents, who live on the ground floor, so there is always someone to help with directions, meals or trek advice.',
+  text: 'Himalayan Hamlet is the family home of Ashish, who grew up in Almora. His parents, Arjun and Saraswati, live on the ground floor, so there is always someone to help with directions, meals or trek advice.',
+  storyUrl: 'our-family-home-in-almora/',
   note: '', // optional line shown under the hosts text
   day: [
     { label: 'Sunrise', value: 'Chai on the balcony, peaks turning gold' },
@@ -154,9 +156,11 @@ export const FAQ = [
   { q: 'How far is the parking from the house?', a: 'It is about a 300 metre walk from the parking, along a path that slopes downhill to the house (and uphill when you leave). Tell us in advance if you travel with elders or heavy luggage.' },
   { q: 'Can my driver stay?', a: 'There is no driver accommodation at the homestay. We can help you find a budget place nearby.' },
   { q: 'Are meals available?', a: 'Breakfast, lunch and dinner can be prepared at extra cost. You can also cook in the kitchen.' },
-  { q: 'How do I book and pay?', a: 'Send your dates on WhatsApp. We confirm availability and share payment details. [Edit: advance amount and cancellation policy]' },
+  { q: 'How do I book and pay?', a: 'Send your dates on WhatsApp. We confirm availability and share the payment details with you.' },
   { q: 'Is it safe, especially in winter?', a: "The family lives on the ground floor, so someone is always close by. Please use the room heaters and the chulha with care, and keep the room ventilated while they run. The house does not have smoke or carbon monoxide alarms, so we are happy to show you how to use everything safely when you arrive." },
 ];
 
 // Add policy pages here when you have them, e.g. { href: 'privacy.html', label: 'Privacy policy' }
-export const FOOTER_LINKS: { href: string; label: string }[] = [];
+export const FOOTER_LINKS: { href: string; label: string }[] = [
+  { href: 'our-family-home-in-almora/', label: 'Our family story' },
+];
