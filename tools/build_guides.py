@@ -81,6 +81,9 @@ PAGES.append(dict(
 <h2>Parents who go the extra mile</h2>
 <p>My parents treat guests the way they would treat relatives. They help with luggage, join guests on short treks nearby, fetch groceries or milk, and explain the area: the plants, the mountains and the local culture. They also help guests plan their travel around Almora, arrange taxis, and pick up local sweets and spices to take home. Guests are welcome to walk to the farm, pick vegetables and fruit, and plant flowers. A few people around the house help keep things clean and carry bags. My sister Manisha has also looked after guests, from decorating the rooms to walks and treks. """ + chk("(check Manisha's role in your own words)") + """</p>
 <blockquote class="story">&ldquo;The entire family is extremely warm and it honestly felt like we are visiting a family; that&rsquo;s how much they take care of you.&rdquo;<cite>Astha, guest</cite></blockquote>
+<h2>Meet Lucy</h2>
+<p>Lucy has been with our family for about ten years. She is a cream and white dog with a lovely thick coat, and she is friendly with everyone. You will often see her roaming around on the ground floor with the family, and she sometimes joins guests and us on short treks nearby.</p>
+<blockquote class="story">&ldquo;Also they have a pet dog and a cat, we enjoyed playing with them.&rdquo;<cite>Divya, guest</cite></blockquote>
 <h2>Solo travellers, long stays and return guests</h2>
 <p>Guests often extend their stay. Some have stayed more than a month, exploring Almora and working from the house. We have hosted solo travellers too, who enjoyed time with my parents and the family, and also their own quiet time.</p>
 <blockquote class="story">&ldquo;Each member played their part in making me feel safe and very welcome, which means a lot as a solo traveler in India for the first time.&rdquo;<cite>Dora, guest</cite></blockquote>
@@ -93,7 +96,6 @@ PAGES.append(dict(
 <li><b>Vegetables from the garden</b> for guests who want to cook in the kitchen.</li>
 <li><b>A scooty to borrow or rent</b> for a short tour of town.</li>
 <li><b>Company on a walk.</b> Family members have joined guests on the trek to Kasar Devi and other nearby hikes.</li>
-<li><b>Pets.</b> Guests often mention Lucy, our much-loved dog, and our cat.</li>
 </ul>
 <blockquote class="story">&ldquo;Ashish and his family are always just a message away, yet they give you complete privacy throughout your stay. It&rsquo;s rare to find this perfect balance.&rdquo;<cite>Saurabh, guest</cite></blockquote>
 <blockquote class="story">&ldquo;We booked this place for 1 day but we extended our stay here for next day as well, because we felt like home only and the food prepared by aunt is so good.&rdquo;<cite>Swati, guest</cite></blockquote>
