@@ -30,6 +30,7 @@ export const NAV = [
   { href: '#gallery', label: 'Gallery' },
   { href: '#around', label: 'Around Almora' },
   { href: '#faq', label: 'FAQ' },
+  { href: 'our-family-home-in-almora/', label: 'Our story' },
 ];
 
 export const HERO = {
@@ -127,7 +128,8 @@ export const RATINGS = {
 };
 
 export const HOSTS = {
-  text: 'Ashish is a software engineer who has lived in Almora for over 20 years. He runs Himalayan Hamlet with his parents, who live on the ground floor, so there is always someone to help with directions, meals or trek advice.',
+  text: 'Himalayan Hamlet is the family home of Ashish, who grew up in Almora. His parents, Arjun and Saraswati, live on the ground floor, so there is always someone to help with directions, meals or trek advice.',
+  storyUrl: 'our-family-home-in-almora/',
   note: '', // optional line shown under the hosts text
   day: [
     { label: 'Sunrise', value: 'Chai on the balcony, peaks turning gold' },
@@ -159,4 +161,6 @@ export const FAQ = [
 ];
 
 // Add policy pages here when you have them, e.g. { href: 'privacy.html', label: 'Privacy policy' }
-export const FOOTER_LINKS: { href: string; label: string }[] = [];
+export const FOOTER_LINKS: { href: string; label: string }[] = [
+  { href: 'our-family-home-in-almora/', label: 'Our family story' },
+];

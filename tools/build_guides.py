@@ -13,9 +13,13 @@ WA = "https://wa.me/917892712293?text=" + urllib.parse.quote(
     "Namaste! I found Himalayan Hamlet on your website and would like to enquire about a stay in Almora.")
 IG = "https://instagram.com/himalayan_hamlet"
 
+CUR_DRAFT = True
+
 def chk(t):
-    """A fact the host should verify; highlighted only in draft mode."""
-    return f'<mark class="check">{t}</mark>' if DRAFT else (t if not t.startswith("your ") else "")
+    """A fact the host should verify; highlighted in draft pages, dropped from published ones."""
+    if CUR_DRAFT:
+        return f'<mark class="check">{t}</mark>'
+    return "" if t.startswith(("(", "your ")) else t
 
 def table(head, rows):
     h = "".join(f"<th>{c}</th>" for c in head)
@@ -169,6 +173,7 @@ PAGES.append(dict(
 
 PAGES.append(dict(
     slug="our-family-home-in-almora",
+    draft=False,
     title="Our family home in Almora: the story of Himalayan Hamlet",
     desc="Himalayan Hamlet is a family home in Almora built by a grandfather, run by parents Arjun and Saraswati, and opened to guests since Covid. Early light on Nanda Devi, home-cooked food and a family that treats guests like family.",
     h1="Our family home in Almora",
@@ -208,14 +213,16 @@ PAGES.append(dict(
 <blockquote class="story">&ldquo;They were always there to help us, from renting a scooty, to food, to giving us right directions.&rdquo;<cite>Sanjivani, guest</cite></blockquote>
 <blockquote class="story">&ldquo;For anyone wondering about work-from-home facilities, they have good network connectivity and reliable high-speed Wi-Fi. I was able to complete my office work seamlessly and attend Zoom calls without any glitches.&rdquo;<cite>Sakshi, guest</cite></blockquote>
 <h2>Come and stay</h2>
-<p>Check dates on the <a href="../#book">availability calendar</a>, read <a href="../things-to-do-in-almora/">what to do around Almora</a>, or message us on WhatsApp below. Photos of the house are in the <a href="../#gallery">gallery</a>. """ + chk("(add 2 or 3 of your own photos here: balcony morning, a meal, the garden)") + """</p>"""))
+<p>Check dates on the <a href="../#book">availability calendar</a>, or message us on WhatsApp below. Photos of the house are in the <a href="../#gallery">gallery</a>. """ + chk("(add 2 or 3 of your own photos here: balcony morning, a meal, the garden)") + """</p>"""))
 
 
 def render(p):
-    robots = '<meta name="robots" content="noindex, nofollow">' if DRAFT else ""
-    canon = "" if DRAFT else f'<link rel="canonical" href="{DOMAIN}/{p["slug"]}/">'
+    global CUR_DRAFT
+    CUR_DRAFT = draft = p.get("draft", True)
+    robots = '<meta name="robots" content="noindex, nofollow">' if draft else ""
+    canon = "" if draft else f'<link rel="canonical" href="{DOMAIN}/{p["slug"]}/">'
     banner = ('<div class="draft"><b>Draft preview.</b> This page is not public, is hidden from Google and is not linked '
-              'from the homepage. Highlighted text needs your check or your own words.</div>') if DRAFT else ""
+              'from the homepage. Highlighted text needs your check or your own words.</div>') if draft else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -233,7 +240,7 @@ def render(p):
 <body>
 <header class="site-header solid"><div class="wrap hd">
 <a class="brand" href="../"><span class="brand-ic">{ICON_LOGO}</span>Himalayan Hamlet</a>
-<nav><a href="../#stay">The stay</a><a href="../#rooms">Rooms</a><a href="../#gallery">Gallery</a><a href="../#around">Around Almora</a><a href="../#faq">FAQ</a><a class="btn" href="../#top">Enquire</a></nav>
+<nav><a href="../#stay">The stay</a><a href="../#rooms">Rooms</a><a href="../#gallery">Gallery</a><a href="../#around">Around Almora</a><a href="../#faq">FAQ</a><a href="../our-family-home-in-almora/">Our story</a><a class="btn" href="../#top">Enquire</a></nav>
 </div></header>
 <main class="guide"><div class="wrap narrow">
 {banner}
