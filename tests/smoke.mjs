@@ -154,9 +154,23 @@ for (const [name, viewport] of [
       `${name}: ${slug} has no sideways scrolling`,
     );
     check((await page.locator('.ig-float').count()) === 1, `${name}: ${slug} has the Instagram button`);
+    if (name.includes('phone') || name.includes('mobile') || (await page.viewportSize()).width <= 900) {
+      await page.click('.menu-btn');
+      check(await page.locator('.m-sheet a', { hasText: 'Our story' }).isVisible(), `${name}: ${slug} menu opens`);
+      await page.keyboard.press('Escape');
+      check(!(await page.locator('.m-sheet').isVisible()), `${name}: ${slug} menu closes`);
+    }
   }
   await page.goto('http://localhost:4300/index.html');
   await page.waitForSelector('h1');
+  if ((await page.viewportSize()).width <= 900) {
+    await page.click('.menu-btn');
+    await page.locator('.m-sheet a', { hasText: 'Our story' }).waitFor({ state: 'visible', timeout: 3000 }).catch(() => {});
+    check(await page.locator('.m-sheet a', { hasText: 'Our story' }).isVisible(), `${name}: home menu opens`);
+    check(!(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)), `${name}: menu causes no sideways scroll`);
+    await page.screenshot({ path: `smoke-out/${name}-menu.png` });
+    await page.click('.menu-btn');
+  }
 
   await page.screenshot({ path: `smoke-out/${name}-top.png` });
   await page.screenshot({ path: `smoke-out/${name}-full.png`, fullPage: true });

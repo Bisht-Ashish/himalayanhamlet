@@ -131,6 +131,7 @@ PAGES.append(dict(
 <li>Work with the morning sun on the balcony, and take breaks looking at the open valley and the snow-capped peaks.</li>
 <li>Have home-cooked food instead of the office cafeteria, and say hello to the familiar faces around.</li>
 <li>Walk around the house, play with the dogs, help my parents with small things, and have long conversations with them.</li>
+<li>Between calls, water the plants and help in the kitchen garden, which is a good way to rest your eyes.</li>
 <li>In the evening, go out for a walk. Kasar Devi is about a 10 minute drive, where you can sit in a cafe and watch the sunset with an even more open view of the peaks.</li>
 <li>In winter, finish the day with a bonfire.</li>
 </ul>
@@ -144,7 +145,7 @@ PAGES.append(dict(
 <blockquote class="story">&ldquo;If you are looking for a long term stay and an abode away from the world, this is the place for you!&rdquo;<cite>Sanjivani, guest</cite></blockquote>
 <h2>The longest stay: six weeks</h2>
 <div class="feature">
-<p class="feature-lead">Mudita came to Almora on her own to explore, and stayed six weeks.</p>
+<p class="feature-lead">A solo traveller came to explore on her own, and stayed six weeks.</p>
 <ul class="chips">
 <li>6 weeks</li>
 <li>Holi with the neighbours</li>
@@ -152,8 +153,8 @@ PAGES.append(dict(
 </ul>
 <p>She spent her days at the slow pace of the town. She visited the temples around, some that even I did not know. She learned about spirituality, wrote a diary of everything, and got to know the neighbours. In the evenings we shared tea and long talks, and she cooked with the family and came along with us to the cafes. She celebrated Holi here.</p>
 <p>After a few weeks her mother came to stay for a week. Then a friend joined her, and finally her husband. She is fun and full of life, and the house was happier for it.</p>
-<blockquote class="story">&ldquo;Brightly lit airy rooms that make it perfect for relaxation, positivity, study, and spiritual practice.&rdquo;<cite>Mudita, guest</cite></blockquote>
-<blockquote class="story">&ldquo;Loved my stay here and hope to have a long extended stay for silent time, writing, study and temple visits.&rdquo;<cite>Mudita, guest</cite></blockquote>
+<blockquote class="story">&ldquo;Brightly lit airy rooms that make it perfect for relaxation, positivity, study, and spiritual practice.&rdquo;<cite>Guest, six-week stay</cite></blockquote>
+<blockquote class="story">&ldquo;Loved my stay here and hope to have a long extended stay for silent time, writing, study and temple visits.&rdquo;<cite>Guest, six-week stay</cite></blockquote>
 </div>
 """))
 
@@ -177,13 +178,18 @@ def render(p):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="../guide-assets/styles.css">
-<link rel="stylesheet" href="../guide-assets/guide.css?v=notes4">
+<link rel="stylesheet" href="../guide-assets/guide.css?v=notes5">
 </head>
 <body>
 <header class="site-header solid"><div class="wrap hd">
 <a class="brand" href="../"><span class="brand-ic">{ICON_LOGO}</span>Himalayan Hamlet</a>
 <nav><a href="../#stay">The stay</a><a href="../#rooms">Rooms</a><a href="../#gallery">Gallery</a><a href="../#around">Around Almora</a><a href="../#faq">FAQ</a><a href="../our-family-home-in-almora/">Our story</a><a class="btn" href="../#top">Enquire</a></nav>
-</div></header>
+<button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="m-sheet"><span></span><span></span></button>
+</div>
+
+</header>
+<div class="m-sheet" id="m-sheet" hidden><a href="../#stay">The stay</a><a href="../#rooms">Rooms</a><a href="../#gallery">Gallery</a><a href="../#around">Around Almora</a><a href="../#faq">FAQ</a><a href="../our-family-home-in-almora/">Our story</a><a class="m-cta" href="../#top">Enquire</a></div>
+<script>(function(){{var b=document.querySelector('.menu-btn'),s=document.getElementById('m-sheet'),h=document.querySelector('.site-header');function t(o){{h.classList.toggle('m-open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');s.hidden=!o;document.body.style.overflow=o?'hidden':''}}b.onclick=function(){{t(b.getAttribute('aria-expanded')!=='true')}};s.onclick=function(e){{if(e.target.closest('a'))t(false)}};document.onkeydown=function(e){{if(e.key==='Escape')t(false)}}}})()</script>
 <main class="guide"><div class="wrap narrow">
 {banner}
 <p class="crumbs"><a href="../">Himalayan Hamlet</a> / Almora guide</p>
