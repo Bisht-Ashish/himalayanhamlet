@@ -106,6 +106,47 @@ PAGES.append(dict(
 """))
 
 
+PAGES.append(dict(
+    slug="work-from-almora",
+    title="Working from the mountains: Wi-Fi, a desk and slow days in Almora",
+    desc="What it is really like to work remotely from Himalayan Hamlet in Almora: 100 Mbps Airtel broadband with a BSNL backup, power backup, a quiet desk or balcony, and weekly and monthly stays.",
+    h1="Working from the mountains",
+    lead="We work from this house ourselves, often. This is what it is really like: the internet, the quiet, and what a work day looks like with the Himalayas outside.",
+    body=lambda: """
+<h2>The connection</h2>
+<ul>
+<li><b>Airtel broadband, 100 Mbps,</b> with a <b>BSNL line as backup</b>.</li>
+<li><b>An inverter</b> keeps the Wi-Fi running. Power cuts are rare, and mostly happen in bad weather.</li>
+<li><b>Mobile networks work well,</b> both Jio and Airtel.</li>
+<li><b>It has been reliable.</b> The only interruptions we see are during very heavy rain.</li>
+</ul>
+<blockquote class="story">&ldquo;For anyone wondering about work-from-home facilities, they have good network connectivity and reliable high-speed Wi-Fi. I was able to complete my office work seamlessly and attend Zoom calls without any glitches.&rdquo;<cite>Sakshi, guest</cite></blockquote>
+<h2>Where you will work</h2>
+<p>There is a proper desk set up for work in the house. Many guests prefer the balcony instead, with the morning sun and the pleasant evenings.</p>
+<p>It is quiet during the day. You hear birds, the wind moving through the dense forest nearby, and now and then the sun warming the tin roof. Sometimes the dogs are playing around outside.</p>
+<blockquote class="story">&ldquo;Great Wifi. Awesome home cooked meals. Very quiet and private. Himalayan views. Well equipped kitchen. Power Backup.&rdquo;<cite>Vidit, guest</cite></blockquote>
+<h2>A work day here</h2>
+<p>This is how I spend my own days when I work from the house. It is a slow life, and you have time for yourself, so it is easy to focus.</p>
+<ul>
+<li>Work with the morning sun on the balcony, and take breaks looking at the open valley and the snow-capped peaks.</li>
+<li>Have home-cooked food instead of the office cafeteria, and say hello to the familiar faces around.</li>
+<li>Walk around the house, play with the dogs, help my parents with small things, and have long conversations with them.</li>
+<li>In the evening, go out for a walk. Kasar Devi is about a 10 minute drive, where you can sit in a cafe and watch the sunset with an even more open view of the peaks.</li>
+<li>In winter, finish the day with a bonfire.</li>
+</ul>
+<h2>Staying longer</h2>
+<ul>
+<li>We offer longer stays depending on availability, with <b>weekly and monthly discounts</b>. Message us with your dates for the rates.</li>
+<li>Meals are not part of the long-stay rate. The kitchen is well equipped, so many guests cook for themselves.</li>
+<li>There is an automatic washing machine, and guests do their own laundry.</li>
+<li>A grocery store is about 500 metres away on the main road with most daily needs. Local farmers also pass by with fresh vegetables from their fields, and you can buy from them directly. Milk can be arranged from the village.</li>
+</ul>
+<blockquote class="story">&ldquo;If you are looking for a long term stay and an abode away from the world, this is the place for you!&rdquo;<cite>Sanjivani, guest</cite></blockquote>
+<h2>The longest stay: six weeks</h2>
+<p>Our longest guest so far stayed six weeks. She was a solo traveller from Kerala who came to Almora to explore. She visited the temples around, some that even I did not know, and spent evenings with us over tea and long talks. She cooked with the family, came with us to cafes, celebrated Holi, got to know the neighbours, and wrote a diary of everything. Later her mother joined her for a week, and then her husband. """ + chk("(ask her if she is happy to be mentioned like this, and whether to name her or keep it anonymous)") + """</p>
+"""))
+
+
 def render(p):
     global CUR_DRAFT
     CUR_DRAFT = draft = p.get("draft", True)
