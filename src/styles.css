@@ -60,6 +60,8 @@ p{margin:0 0 1em}
 @keyframes msheet{from{opacity:0;transform:translateY(-8px)}}
 @media(prefers-reduced-motion:reduce){.m-sheet{animation:none}.menu-btn span{transition:none}}
 
+.new{font:700 .62rem/1 var(--sans);font-style:normal;letter-spacing:.06em;text-transform:uppercase;background:var(--honey);color:var(--honey-ink);padding:4px 7px;border-radius:99px;margin-left:8px;vertical-align:middle}
+
 /* hero */
 .hero{position:relative;min-height:max(560px,min(84svh,760px));display:flex;align-items:flex-end;color:#fff;isolation:isolate;overflow:hidden}
 .heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 58%;z-index:-2}

@@ -13,7 +13,7 @@ import { NAV, SITE } from './site-data';
     <a class="brand" href="#top"><app-icon name="logo" />{{ site.name }}</a>
     <nav>
       @for (n of nav; track n.href) {
-        <a [href]="n.href">{{ n.label }}</a>
+        <a [href]="n.href">{{ n.label }}@if (n.isNew) {<i class="new">New</i>}</a>
       }
       <a class="btn" href="#book">Enquire</a>
     </nav>
@@ -23,7 +23,7 @@ import { NAV, SITE } from './site-data';
   @if (open()) {
     <div class="m-sheet" id="m-sheet" (click)="toggle(false)">
       @for (n of nav; track n.href) {
-        <a [href]="n.href">{{ n.label }}</a>
+        <a [href]="n.href">{{ n.label }}@if (n.isNew) {<i class="new">New</i>}</a>
       }
       <a class="m-cta" href="#book">Enquire</a>
     </div>
