@@ -44,3 +44,11 @@ mark.check{background:#fde9b8;color:#2a1c06;padding:1px 6px;border-radius:6px;fo
 
 .guide figure.shot{margin:1.6rem 0;clear:both}
 .guide figure.shot img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 12px 30px -14px rgba(0,0,0,.4)}
+
+.guide .feature{clear:both;margin:1.2rem 0 1.6rem;padding:1.4rem 1.5rem 1rem;background:linear-gradient(160deg,#fff8e6,#f4efe2);border-radius:18px;border:1px solid #eadfc4;overflow:hidden}
+.guide .feature-lead{font:700 1.2rem/1.35 var(--sans);color:#3a2e1c;margin:0 0 .8rem}
+.guide .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 1rem}
+.guide .chips li{background:#fff;border:1px solid #e3d6b4;color:#6a4d12;font-weight:700;font-size:.88rem;padding:6px 12px;border-radius:999px}
+.guide .feature blockquote.story,.guide .feature blockquote.story:nth-of-type(even){width:min(100%,440px);margin:1.6rem 0 1.2rem 0;background:#fff}
+.guide .feature blockquote.story:nth-of-type(even){margin-left:auto;background:#eef6f2}
+@media (max-width:760px){.guide .feature{padding:1.1rem 1rem .6rem}.guide .feature blockquote.story,.guide .feature blockquote.story:nth-of-type(even){margin:1.6rem auto 1.2rem}}
