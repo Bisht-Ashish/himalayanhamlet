@@ -131,6 +131,7 @@ PAGES.append(dict(
 <li>Work with the morning sun on the balcony, and take breaks looking at the open valley and the snow-capped peaks.</li>
 <li>Have home-cooked food instead of the office cafeteria, and say hello to the familiar faces around.</li>
 <li>Walk around the house, play with the dogs, help my parents with small things, and have long conversations with them.</li>
+<li>Between calls, water the plants and help in the kitchen garden, which is a good way to rest your eyes.</li>
 <li>In the evening, go out for a walk. Kasar Devi is about a 10 minute drive, where you can sit in a cafe and watch the sunset with an even more open view of the peaks.</li>
 <li>In winter, finish the day with a bonfire.</li>
 </ul>
