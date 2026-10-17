@@ -10,13 +10,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="../guide-assets/styles.css">
-<link rel="stylesheet" href="../guide-assets/guide.css?v=notes4">
+<link rel="stylesheet" href="../guide-assets/guide.css?v=notes5">
 </head>
 <body>
 <header class="site-header solid"><div class="wrap hd">
 <a class="brand" href="../"><span class="brand-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20l7-12 4 6 2.5-4L22 20z"/></svg></span>Himalayan Hamlet</a>
 <nav><a href="../#stay">The stay</a><a href="../#rooms">Rooms</a><a href="../#gallery">Gallery</a><a href="../#around">Around Almora</a><a href="../#faq">FAQ</a><a href="../our-family-home-in-almora/">Our story</a><a class="btn" href="../#top">Enquire</a></nav>
-</div></header>
+<button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="m-sheet"><span></span><span></span></button>
+</div>
+<div class="m-sheet" id="m-sheet" hidden><a href="../#stay">The stay</a><a href="../#rooms">Rooms</a><a href="../#gallery">Gallery</a><a href="../#around">Around Almora</a><a href="../#faq">FAQ</a><a href="../our-family-home-in-almora/">Our story</a><a class="m-cta" href="../#top">Enquire</a></div>
+</header>
+<script>(function(){var b=document.querySelector('.menu-btn'),s=document.getElementById('m-sheet'),h=document.querySelector('.site-header');function t(o){h.classList.toggle('m-open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');s.hidden=!o;document.body.style.overflow=o?'hidden':''}b.onclick=function(){t(b.getAttribute('aria-expanded')!=='true')};s.onclick=function(e){if(e.target.closest('a'))t(false)};document.onkeydown=function(e){if(e.key==='Escape')t(false)}})()</script>
 <main class="guide"><div class="wrap narrow">
 <div class="draft"><b>Draft preview.</b> This page is not public, is hidden from Google and is not linked from the homepage. Highlighted text needs your check or your own words.</div>
 <p class="crumbs"><a href="../">Himalayan Hamlet</a> / Almora guide</p>
