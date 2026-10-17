@@ -24,13 +24,14 @@ export function waLink(text: string): string {
   return 'https://wa.me/' + SITE.whatsapp + '?text=' + encodeURIComponent(text);
 }
 
-export const NAV = [
+export const NAV: { href: string; label: string; isNew?: boolean }[] = [
   { href: '#stay', label: 'The stay' },
   { href: '#rooms', label: 'Rooms' },
   { href: '#gallery', label: 'Gallery' },
   { href: '#around', label: 'Around Almora' },
   { href: '#faq', label: 'FAQ' },
   { href: 'our-family-home-in-almora/', label: 'Our story' },
+  { href: 'work-from-almora/', label: 'Work from Almora', isNew: true },
 ];
 
 export const HERO = {
@@ -161,4 +162,5 @@ export const FAQ = [
 // Add policy pages here when you have them, e.g. { href: 'privacy.html', label: 'Privacy policy' }
 export const FOOTER_LINKS: { href: string; label: string }[] = [
   { href: 'our-family-home-in-almora/', label: 'Our family story' },
+  { href: 'work-from-almora/', label: 'Working from the mountains' },
 ];
