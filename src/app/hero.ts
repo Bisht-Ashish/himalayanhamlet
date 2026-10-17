@@ -17,16 +17,16 @@ import { HERO } from './site-data';
       }
     </div>
     <form class="bar" (submit)="$event.preventDefault()">
-      <label>Check-in<input type="date" data-ph="Add date" [class.empty]="!q.checkIn()" [value]="q.checkIn()" (input)="q.checkIn.set($any($event.target).value)"></label>
-      <label>Check-out<input type="date" data-ph="Add date" [class.empty]="!q.checkOut()" [value]="q.checkOut()" (input)="q.checkOut.set($any($event.target).value)"></label>
+      <label>Check-in<input #ci type="date" data-ph="Add date" [class.empty]="!q.checkIn()" [value]="q.checkIn()" (input)="q.checkIn.set($any($event.target).value)" (change)="q.checkIn.set($any($event.target).value)"></label>
+      <label>Check-out<input #co type="date" data-ph="Add date" [class.empty]="!q.checkOut()" [value]="q.checkOut()" (input)="q.checkOut.set($any($event.target).value)" (change)="q.checkOut.set($any($event.target).value)"></label>
       <label>Guests
-        <select (change)="q.guests.set($any($event.target).value)">
+        <select #gs (change)="q.guests.set($any($event.target).value)">
           @for (n of guestOptions; track n) {
             <option [value]="n" [selected]="n === q.guests()">{{ n }} {{ n === '1' ? 'guest' : 'guests' }}</option>
           }
         </select>
       </label>
-      <a class="btn" [href]="q.link()" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      <a class="btn" [href]="q.link()" target="_blank" rel="noopener" (click)="send($event, ci.value, co.value, gs.value)">Enquire on WhatsApp</a>
     </form>
   </div>
 </section>`,
@@ -35,4 +35,14 @@ export class Hero {
   readonly hero = HERO;
   readonly q = inject(Enquiry);
   readonly guestOptions = ['1', '2', '3', '4'];
+
+  /** Reads the fields at the moment of the tap, so dates are never missed (some phone browsers delay their events). */
+  send(ev: Event, checkIn: string, checkOut: string, guests: string) {
+    this.q.checkIn.set(checkIn);
+    this.q.checkOut.set(checkOut);
+    this.q.guests.set(guests);
+    ev.preventDefault();
+    const url = this.q.link();
+    if (!window.open(url, '_blank')) window.location.href = url;
+  }
 }
