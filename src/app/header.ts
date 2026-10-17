@@ -19,6 +19,7 @@ import { NAV, SITE } from './site-data';
     </nav>
     <button class="menu-btn" type="button" [attr.aria-label]="open() ? 'Close menu' : 'Open menu'" [attr.aria-expanded]="open()" aria-controls="m-sheet" (click)="toggle()"><span></span><span></span></button>
   </div>
+</header>
   @if (open()) {
     <div class="m-sheet" id="m-sheet" (click)="toggle(false)">
       @for (n of nav; track n.href) {
@@ -26,8 +27,7 @@ import { NAV, SITE } from './site-data';
       }
       <a class="m-cta" href="#book">Enquire</a>
     </div>
-  }
-</header>`,
+  }`,
 })
 export class Header {
   readonly site = SITE;

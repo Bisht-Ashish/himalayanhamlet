@@ -186,8 +186,9 @@ def render(p):
 <nav><a href="../#stay">The stay</a><a href="../#rooms">Rooms</a><a href="../#gallery">Gallery</a><a href="../#around">Around Almora</a><a href="../#faq">FAQ</a><a href="../our-family-home-in-almora/">Our story</a><a class="btn" href="../#top">Enquire</a></nav>
 <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="m-sheet"><span></span><span></span></button>
 </div>
-<div class="m-sheet" id="m-sheet" hidden><a href="../#stay">The stay</a><a href="../#rooms">Rooms</a><a href="../#gallery">Gallery</a><a href="../#around">Around Almora</a><a href="../#faq">FAQ</a><a href="../our-family-home-in-almora/">Our story</a><a class="m-cta" href="../#top">Enquire</a></div>
+
 </header>
+<div class="m-sheet" id="m-sheet" hidden><a href="../#stay">The stay</a><a href="../#rooms">Rooms</a><a href="../#gallery">Gallery</a><a href="../#around">Around Almora</a><a href="../#faq">FAQ</a><a href="../our-family-home-in-almora/">Our story</a><a class="m-cta" href="../#top">Enquire</a></div>
 <script>(function(){{var b=document.querySelector('.menu-btn'),s=document.getElementById('m-sheet'),h=document.querySelector('.site-header');function t(o){{h.classList.toggle('m-open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');s.hidden=!o;document.body.style.overflow=o?'hidden':''}}b.onclick=function(){{t(b.getAttribute('aria-expanded')!=='true')}};s.onclick=function(e){{if(e.target.closest('a'))t(false)}};document.onkeydown=function(e){{if(e.key==='Escape')t(false)}}}})()</script>
 <main class="guide"><div class="wrap narrow">
 {banner}

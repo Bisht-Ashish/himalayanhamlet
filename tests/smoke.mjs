@@ -165,6 +165,7 @@ for (const [name, viewport] of [
   await page.waitForSelector('h1');
   if ((await page.viewportSize()).width <= 900) {
     await page.click('.menu-btn');
+    await page.locator('.m-sheet a', { hasText: 'Our story' }).waitFor({ state: 'visible', timeout: 3000 }).catch(() => {});
     check(await page.locator('.m-sheet a', { hasText: 'Our story' }).isVisible(), `${name}: home menu opens`);
     check(!(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)), `${name}: menu causes no sideways scroll`);
     await page.screenshot({ path: `smoke-out/${name}-menu.png` });
