@@ -147,13 +147,9 @@ PAGES.append(dict(
 <h2>The longest stay: six weeks</h2>
 <div class="feature">
 <p class="feature-lead">A solo traveller came to explore on her own, and stayed six weeks.</p>
-<ul class="chips">
-<li>6 weeks</li>
-<li>Holi with the neighbours</li>
-<li>Joined by her mother, a friend and her husband</li>
-</ul>
-<p>She spent her days at the slow pace of the town. She visited the temples around, some that even I did not know. She learned about spirituality, wrote a diary of everything, and got to know the neighbours. In the evenings we shared tea and long talks, and she cooked with the family and came along with us to the cafes. She celebrated Holi here.</p>
-<p>After a few weeks her mother came to stay for a week. Then a friend joined her, and finally her husband. She is fun and full of life, and the house was happier for it.</p>
+<p>Over six weeks, her days settled into the pace of the town: a visit to one of the temples nearby, some of them ones even I had not heard of, then quiet hours reading about spirituality and writing in her diary. Evenings were for tea with the family, and the tea usually turned into long talks.</p>
+<p>Slowly she became part of the house. She cooked with the family, came along with us to the cafes, and got to know the neighbours. By Holi, she was out celebrating with them.</p>
+<p>Then the house filled up around her. Her mother came to stay for a week, then a friend, and finally her husband. That is what a long stay here can become: not a holiday, but a few weeks of ordinary life in Almora.</p>
 <blockquote class="story">&ldquo;Brightly lit airy rooms that make it perfect for relaxation, positivity, study, and spiritual practice.&rdquo;<cite>Guest, six-week stay</cite></blockquote>
 <blockquote class="story">&ldquo;Loved my stay here and hope to have a long extended stay for silent time, writing, study and temple visits.&rdquo;<cite>Guest, six-week stay</cite></blockquote>
 </div>
