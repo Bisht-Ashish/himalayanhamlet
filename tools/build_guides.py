@@ -62,36 +62,36 @@ PAGES.append(dict(
     slug="our-family-home-in-almora",
     draft=False,
     title="Our family home in Almora: the story of Himalayan Hamlet",
-    desc="Himalayan Hamlet is a family home in Almora built by a grandfather, run by parents Arjun and Saraswati, and opened to guests since Covid. Early light on Nanda Devi, home-cooked food and a family that treats guests like family.",
+    desc="Himalayan Hamlet is a family home in Almora, built by my grandfather and run by my parents, Arjun and Saraswati, who began hosting guests during Covid. Home-cooked food and an east-facing view of Nanda Devi.",
     h1="Our family home in Almora",
-    lead="Himalayan Hamlet is the house where my brother Nitin, my sister Manisha and I grew up. Today my parents welcome guests into it as part of the family.",
+    lead="Himalayan Hamlet is the house where my brother Nitin, my sister Manisha and I grew up. Today my parents host guests in it.",
     body=lambda: """
 <h2>A house with a history</h2>
 <p>My grandfather built this house in Almora. Years later, my father, Arjun, added another floor, which is the floor guests stay on today. My brother Nitin, my sister Manisha and I grew up here. Then, like many people from the hills, we moved away for work and settled in Bangalore, where my wife Akansha and I live now. She has met a few of our guests on her visits too.</p>
 <p>My parents, Arjun and Saraswati, stayed. During the Covid pandemic, when the house had few visitors, we began hosting guests as a homestay. We still visit for holidays and workations, so we know the house the way a guest does too. </p>
 <h2>Mornings face east</h2>
-<p>The house faces east, so the first sun reaches it early. In the morning light you can see Nanda Devi, Nandakot, Chaukhamba, Trishul and other peaks glowing, and you can hear the birds before you see them. With luck you will spot the local wild hens wandering around. The morning is always pleasant.</p>
+<p>The house faces east, so the first sun reaches it early. On a clear morning you can see Nanda Devi, Nandakot, Chaukhamba, Trishul and other peaks catch the first light, and you hear the birds before you see them. With luck you will spot the local wild hens wandering around.</p>
 <figure class="shot"><img src="../images/himalayan-range-morning.webp" alt="Snow-covered Himalayan peaks glowing in early morning light under a clear blue sky, seen from Almora" width="1280" height="960" loading="lazy"></figure>
 <blockquote class="story">&ldquo;One of the most memorable parts of our stay was the breathtaking sunrise and the stunning panoramic view of the entire Himalayan range from the balcony. Waking up to such a magical view every morning was an unforgettable experience.&rdquo;<cite>Sarada, guest</cite></blockquote>
-<p>My favourite hour is the slow morning. I get up, walk through the garden among the green, look at the peaks, listen to the birds, and say a small hello to familiar faces on their way to work. In the city, mornings start with a rush to beat the traffic. Here, they start slowly, and it is the thing I miss most when I am away.</p>
+<p>When I am home, I start the day with a walk through the garden. I look at the peaks, listen to the birds and say hello to people from the neighbourhood on their way to work. In Bangalore my mornings are about beating the traffic, so this is what I miss most when I am away.</p>
 <figure class="shot"><img src="../images/himalayan-panorama.webp" alt="Panorama of snow-covered Himalayan peaks above pine-covered hills near Almora under a clear blue sky" width="1280" height="576" loading="lazy"></figure>
 <h2>The food, and the chats around it</h2>
 <p>Guests eat home-cooked Indian food made in our kitchen. There are local juices, homemade chutneys and achaar, and fruits and vegetables grown at home. Tea and coffee are shared, usually with a long chat.</p>
 <blockquote class="story">&ldquo;The food aunty makes and the chats, snacks we had with the family was the star of our trip, we stayed for a week there and it felt like a family vacation.&rdquo;<cite>Piyush, guest</cite></blockquote>
 <blockquote class="story">&ldquo;More than the food itself, it was her sweet little gestures, sending some sweets, extra condiments, or checking in with warmth that made every meal feel special. You genuinely begin to feel like you are not staying at a property, but with family.&rdquo;<cite>Sakshi, guest</cite></blockquote>
-<p>Many guests leave asking for recipes. They ask where to find the spices, they ask for plant cuttings and tiny flower pots, and a few have even asked for advice on buying a piece of land. We are happy to oblige, apart from the land, which we leave to you to think over.</p>
-<h2>Parents who go the extra mile</h2>
+<p>Many guests leave asking for recipes. They ask where to find the spices, they ask for plant cuttings and tiny flower pots, and a few have even asked for advice on buying a piece of land. We are happy to help with all of it, except the land.</p>
+<h2>What my parents do for guests</h2>
 <p>My parents treat guests the way they would treat relatives. They help with luggage, join guests on short treks nearby, fetch groceries or milk, and explain the area: the plants, the mountains and the local culture. They also help guests plan their travel around Almora, arrange taxis, and pick up local sweets and spices to take home. Guests are welcome to walk to the farm, pick vegetables and fruit, and plant flowers. A few people around the house help keep things clean and carry bags. My sister Manisha has also looked after guests, from decorating the rooms to walks and treks. """ + chk("(check Manisha's role in your own words)") + """</p>
 <blockquote class="story">&ldquo;The entire family is extremely warm and it honestly felt like we are visiting a family; that&rsquo;s how much they take care of you.&rdquo;<cite>Astha, guest</cite></blockquote>
 <h2>Meet Lucy</h2>
 <p>Lucy has been with our family for about ten years. She is a cream and white dog with a lovely thick coat, and she is friendly with everyone. You will often see her roaming around on the ground floor with the family, and she sometimes joins guests and us on short treks nearby.</p>
 <blockquote class="story">&ldquo;Also they have a pet dog and a cat, we enjoyed playing with them.&rdquo;<cite>Divya, guest</cite></blockquote>
 <h2>Solo travellers, long stays and return guests</h2>
-<p>Guests often extend their stay. Some have stayed more than a month, exploring Almora and working from the house. We have hosted solo travellers too, who enjoyed time with my parents and the family, and also their own quiet time.</p>
+<p>Guests often extend their stay. Some have stayed more than a month, exploring Almora and working from the house. Solo travellers stay with us too. Most spend some time with my parents and the rest on their own.</p>
 <blockquote class="story">&ldquo;Each member played their part in making me feel safe and very welcome, which means a lot as a solo traveler in India for the first time.&rdquo;<cite>Dora, guest</cite></blockquote>
-<p>Some guests now come back again and again, and they feel like family to us.</p>
+<p>A few guests keep coming back, and by now they are friends of the family.</p>
 <h2>The small things guests mention</h2>
-<p>These are not things we advertise, but guests mention them again and again in their reviews.</p>
+<p>We do not advertise these, but they come up often in reviews.</p>
 <ul>
 <li><b>A welcome drink.</b> Guests are greeted with a glass of buransh (rhododendron) juice.</li>
 <li><b>A bonfire on cold evenings,</b> arranged by my father.</li>
@@ -147,13 +147,9 @@ PAGES.append(dict(
 <h2>The longest stay: six weeks</h2>
 <div class="feature">
 <p class="feature-lead">A solo traveller came to explore on her own, and stayed six weeks.</p>
-<ul class="chips">
-<li>6 weeks</li>
-<li>Holi with the neighbours</li>
-<li>Joined by her mother, a friend and her husband</li>
-</ul>
-<p>She spent her days at the slow pace of the town. She visited the temples around, some that even I did not know. She learned about spirituality, wrote a diary of everything, and got to know the neighbours. In the evenings we shared tea and long talks, and she cooked with the family and came along with us to the cafes. She celebrated Holi here.</p>
-<p>After a few weeks her mother came to stay for a week. Then a friend joined her, and finally her husband. She is fun and full of life, and the house was happier for it.</p>
+<p>Over six weeks, her days settled into the pace of the town: a visit to one of the temples nearby, some of them ones even I had not heard of, then quiet hours reading about spirituality and writing in her diary. Evenings were for tea with the family, and the tea usually turned into long talks.</p>
+<p>Slowly she became part of the house. She cooked with the family, came along with us to the cafes, and got to know the neighbours. By Holi, she was out celebrating with them.</p>
+<p>Then the house filled up around her. Her mother came to stay for a week, then a friend, and finally her husband. That is what a long stay here can become: not a holiday, but a few weeks of ordinary life in Almora.</p>
 <blockquote class="story">&ldquo;Brightly lit airy rooms that make it perfect for relaxation, positivity, study, and spiritual practice.&rdquo;<cite>Guest, six-week stay</cite></blockquote>
 <blockquote class="story">&ldquo;Loved my stay here and hope to have a long extended stay for silent time, writing, study and temple visits.&rdquo;<cite>Guest, six-week stay</cite></blockquote>
 </div>
