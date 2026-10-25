@@ -8,8 +8,8 @@ export const SITE = {
   email: '', // add a real address here once you have one; it then appears in the footer
   greeting:
     "Namaste! 🙏 I found Himalayan Hamlet on your website and I'd like to enquire about a stay in Almora. Could you please share availability and rates?",
-  nightlyRate: 0, // rupees per night; 0 shows "Message us your dates"
-  directPerk: '', // optional: a direct-booking perk, shown only when filled in
+  nightlyRate: 5000, // starting rate in rupees per night; 0 shows "Message us your dates"
+  directPerk: 'a welcome drink when you arrive and a bonfire on cold evenings', // optional: shown by the booking form when filled in
   instagramUrl: 'https://instagram.com/himalayan_hamlet',
   instagramHandle: '@himalayan_hamlet',
   airbnbUrl: 'https://www.airbnb.co.in/rooms/40210492',

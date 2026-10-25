@@ -1,5 +1,6 @@
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject, signal } from '@angular/core';
+import { Injectable, PLATFORM_ID, inject, signal } from '@angular/core';
 
 export interface BookedRange {
   start: string; // first booked night, YYYY-MM-DD
@@ -13,6 +14,8 @@ export class Availability {
   readonly booked = signal<BookedRange[]>([]);
 
   constructor() {
+    // Only in the visitor's browser: the page is pre-built without live data.
+    if (!isPlatformBrowser(inject(PLATFORM_ID))) return;
     this.http.get<BookedRange[]>('booked.json').subscribe({
       next: (data) => this.booked.set(Array.isArray(data) ? data : []),
       error: () => this.booked.set([]),

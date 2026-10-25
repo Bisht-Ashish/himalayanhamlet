@@ -55,7 +55,7 @@ function iso(d: Date): string {
       }
       <p class="avail-msg" aria-live="polite">{{ message() }}</p>
       @if (site.directPerk) {
-        <p class="perk">Book direct: message us on WhatsApp for {{ site.directPerk }}.</p>
+        <p class="perk">Every stay includes {{ site.directPerk }}.</p>
       }
     </div>
   </div>

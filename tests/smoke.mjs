@@ -56,6 +56,22 @@ process.on('unhandledRejection', crash);
 fs.mkdirSync('smoke-out', { recursive: true });
 const browser = await chromium.launch();
 
+// The homepage is pre-built: its HTML file must already hold the page, so it shows
+// before JavaScript runs, in browsers where scripts fail, and to search engines.
+const rawHome = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+check(rawHome.includes('Wake up to Nanda Devi'), 'homepage HTML is pre-built with the headline');
+check(rawHome.includes('id="book"') && rawHome.includes('id="gallery"'), 'homepage HTML is pre-built with all sections');
+{
+  const ctx = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1280, height: 800 } });
+  const page = await ctx.newPage();
+  await page.route(/^https?:\/\/(?!localhost)/, (r) => r.abort());
+  await page.goto('http://localhost:4300/');
+  check(await page.locator('h1', { hasText: 'Wake up to Nanda Devi' }).isVisible(), 'no-JS: headline is visible');
+  check(await page.locator('#rooms h2').isVisible(), 'no-JS: rooms section is visible');
+  await page.screenshot({ path: 'smoke-out/no-js.png' });
+  await ctx.close();
+}
+
 for (const [name, viewport] of [
   ['desktop', { width: 1280, height: 800 }],
   ['small', { width: 340, height: 700 }],
@@ -86,6 +102,8 @@ for (const [name, viewport] of [
     `${name}: hero photo loads`,
   );
   check((await page.locator('.mo').count()) === 4, `${name}: four calendar months`);
+  check((await page.textContent('#rooms .rate')).includes('From ₹5,000'), `${name}: starting price shows`);
+  check((await page.textContent('#book .perk')).includes('bonfire'), `${name}: welcome drink and bonfire show`);
   check((await page.locator('.dg .b').count()) > 0, `${name}: booked days are marked`);
 
   const wa = await page.$$eval('a[href^="https://wa.me/"]', (a) => a.map((x) => x.href));

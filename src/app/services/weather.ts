@@ -1,5 +1,6 @@
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject, signal } from '@angular/core';
+import { Injectable, PLATFORM_ID, inject, signal } from '@angular/core';
 import { SITE } from '../site-data';
 
 export interface ForecastDay {
@@ -25,6 +26,8 @@ export class Weather {
   readonly days = signal<ForecastDay[]>([]);
 
   constructor() {
+    // Only in the visitor's browser: the page is pre-built without live data.
+    if (!isPlatformBrowser(inject(PLATFORM_ID))) return;
     const url =
       'https://api.open-meteo.com/v1/forecast?latitude=' + SITE.latitude +
       '&longitude=' + SITE.longitude +
