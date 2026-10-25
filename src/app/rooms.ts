@@ -23,7 +23,7 @@ import { ROOMS, SITE, waLink } from './site-data';
       <div class="rate">
         <div>
           <h3>Rates</h3>
-          <p><strong>{{ rate }}</strong> per night for the whole suite. Meals are extra, and prices change by season and weekend.</p>
+          <p>From <strong>{{ rate }}</strong> per night for the whole suite. Meals are extra, and prices change by season and weekend.</p>
         </div>
         <a class="btn" [href]="ask" target="_blank" rel="noopener">Ask for rates</a>
       </div>
