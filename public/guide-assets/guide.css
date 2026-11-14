@@ -52,3 +52,9 @@ mark.check{background:#fde9b8;color:#2a1c06;padding:1px 6px;border-radius:6px;fo
 .guide .feature blockquote.story,.guide .feature blockquote.story:nth-of-type(even){width:min(100%,440px);margin:1.6rem 0 1.2rem 0;background:#fff}
 .guide .feature blockquote.story:nth-of-type(even){margin-left:auto;background:#eef6f2}
 @media (max-width:760px){.guide .feature{padding:1.1rem 1rem .6rem}.guide .feature blockquote.story,.guide .feature blockquote.story:nth-of-type(even){margin:1.6rem auto 1.2rem}}
+
+/* Story photos: captions, portrait sizes, the wild hens clip */
+.guide figure.shot figcaption{margin-top:.55rem;color:var(--mute);font-size:.9rem;text-align:center}
+.guide figure.shot.mid{max-width:620px;margin-left:auto;margin-right:auto}
+.guide figure.shot.tall{max-width:420px;margin-left:auto;margin-right:auto}
+.guide figure.shot video{display:block;width:100%;height:auto;border-radius:14px;background:var(--band);box-shadow:0 12px 30px -14px rgba(0,0,0,.4)}
