@@ -161,6 +161,13 @@ def render(p):
     CUR_DRAFT = draft = p.get("draft", True)
     robots = '<meta name="robots" content="noindex, nofollow">' if draft else ""
     canon = "" if draft else f'<link rel="canonical" href="{DOMAIN}/{p["slug"]}/">'
+    if not draft:
+        t, d, u = html.escape(p["title"]), html.escape(p["desc"]), f'{DOMAIN}/{p["slug"]}/'
+        canon += (f'\n<meta property="og:type" content="article"><meta property="og:site_name" content="Himalayan Hamlet">'
+                  f'<meta property="og:title" content="{t}"><meta property="og:description" content="{d}">'
+                  f'<meta property="og:url" content="{u}"><meta property="og:image" content="{DOMAIN}/images/share.jpg">'
+                  f'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+                  f'<meta name="twitter:card" content="summary_large_image">')
     banner = ('<div class="draft"><b>Draft preview.</b> This page is not public, is hidden from Google and is not linked '
               'from the homepage. Highlighted text needs your check or your own words.</div>') if draft else ""
     return f"""<!doctype html>

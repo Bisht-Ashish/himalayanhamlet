@@ -62,6 +62,13 @@ const rawHome = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 check(rawHome.includes('Wake up to Nanda Devi'), 'homepage HTML is pre-built with the headline');
 check(rawHome.includes('id="book"') && rawHome.includes('id="gallery"'), 'homepage HTML is pre-built with all sections');
 {
+  const m = rawHome.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+  let ld = null;
+  try { ld = m && JSON.parse(m[1]); } catch {}
+  check(!!ld && ld['@type'] === 'LodgingBusiness' && ld.address?.addressLocality === 'Almora', 'homepage has valid business details for Google');
+  check(rawHome.includes('og:image') && fs.existsSync(path.join(root, 'images/share.jpg')), 'homepage has a link-preview photo');
+}
+{
   const ctx = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1280, height: 800 } });
   const page = await ctx.newPage();
   await page.route(/^https?:\/\/(?!localhost)/, (r) => r.abort());
